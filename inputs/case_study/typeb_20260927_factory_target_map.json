@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "source_ifc_file": "factory_data_consolidated.json component GlobalIds",
+  "source_ifc_sha256": "",
+  "target_ifc_file": "typeb_nomep.ifc",
+  "target_ifc_sha256": "EC45C5DD24D0E2DD3BEA7A8707490F77D82913E285B5DB850C95F71611F4887B",
+  "mapping_scope": "Four component-level targets referenced by the shared factory energy dataset, remapped onto Type-B beams by type mark (B1/B1/B3/B1a) on the MEP-stripped model",
+  "mapping_method": "Type-mark matched IfcBeam selection on typeb_nomep.ifc (GlobalIds identical to typeb.ifc); factory fixture GlobalIds do not exist in this IFC",
+  "component_global_id_map": {
+    "3czbugqbT86PTcmnme1il$": "3czbugqbT86PTcmnme1jXV",
+    "3czbugqbT86PTcmnme1ilv": "3czbugqbT86PTcmnme1jW1",
+    "3czbugqbT86PTcmnme1ilx": "3czbugqbT86PTcmnme1jZv",
+    "3czbugqbT86PTcmnme1ilr": "3czbugqbT86PTcmnme1jcy"
+  },
+  "mapping_evidence": [
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1il$",
+      "target_global_id": "3czbugqbT86PTcmnme1jXV",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1",
+      "name": "150x100x6mm RHS 钢通:B1:2131762",
+      "revit_tag": "2131762"
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilv",
+      "target_global_id": "3czbugqbT86PTcmnme1jW1",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1",
+      "name": "150x100x6mm RHS 钢通:B1:2131820",
+      "revit_tag": "2131820"
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilx",
+      "target_global_id": "3czbugqbT86PTcmnme1jZv",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B3",
+      "name": "100x100x5mm RHS 钢通:B3:2131860",
+      "revit_tag": "2131860"
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilr",
+      "target_global_id": "3czbugqbT86PTcmnme1jcy",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1a",
+      "name": "150x100x6mm RHS 钢通:B1a:2131665",
+      "revit_tag": "2131665"
+    }
+  ]
+}

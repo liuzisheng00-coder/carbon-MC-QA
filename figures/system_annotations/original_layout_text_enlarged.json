@@ -1,0 +1,24 @@
+{
+  "canvas_pixels": [
+    2205,
+    1488
+  ],
+  "chat_font_pixels": 26,
+  "chat_font_points_at_natural_size": 12,
+  "natural_width_cm": 35.901923076923076,
+  "last_content_y": 1320,
+  "viewport_bottom_y": 1341,
+  "content": {
+    "questions": [
+      "What is the process carbon of the steel frame welding stage?",
+      "Which material has the highest embodied carbon in this modular room?",
+      "What is the carbon emission of this component?"
+    ],
+    "answers": [
+      "159.168 kgCO2e\nperspective: process; source scope: process\ncomputed from 2 atomic carbon record(s)",
+      "Metal - Steel 43 - 355_A1: 4,176.676 kgCO2e\nperspective: material; source scope: material\ncomputed from 139 atomic carbon record(s)\ntotal over all groups in scope: 6,222.233 kgCO2e",
+      "214.900 kgCO2e\nperspective: product; source scope: material+process\ncomputed from 6 atomic carbon record(s)"
+    ]
+  },
+  "edits": "Text enlarged; chat bubbles reflowed within original panel; selected identifier retained as raster; model unaltered."
+}

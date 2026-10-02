@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_ifc_file": "factory_data_consolidated.json component GlobalIds",
+  "source_ifc_sha256": "",
+  "target_ifc_file": "typea1_full_en.ifc",
+  "target_ifc_sha256": "2F82AC19D5C6855BD3466E4436EFD12E494D7527FB636012705C92F6E4B03B15",
+  "mapping_scope": "Four component-level targets referenced by the shared factory energy dataset, remapped onto Type-A English beams by type mark (B1/B1/B3/B1a)",
+  "mapping_method": "Type-mark matched IfcBeam selection on typea1_full_en.ifc; factory fixture GlobalIds do not exist in this IFC",
+  "component_global_id_map": {
+    "3czbugqbT86PTcmnme1il$": "3czbugqbT86PTcmnme1jjF",
+    "3czbugqbT86PTcmnme1ilv": "3czbugqbT86PTcmnme1jj9",
+    "3czbugqbT86PTcmnme1ilx": "3czbugqbT86PTcmnme1iuM",
+    "3czbugqbT86PTcmnme1ilr": "3czbugqbT86PTcmnme1jsQ"
+  },
+  "mapping_evidence": [
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1il$",
+      "target_global_id": "3czbugqbT86PTcmnme1jjF",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1"
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilv",
+      "target_global_id": "3czbugqbT86PTcmnme1jj9",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1"
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilx",
+      "target_global_id": "3czbugqbT86PTcmnme1iuM",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B3"
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilr",
+      "target_global_id": "3czbugqbT86PTcmnme1jsQ",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1a"
+    }
+  ]
+}

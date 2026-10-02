@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# Frontend dependencies and generated builds
+node_modules/
+dist/
+dist-*/
+**/public/web-ifc/*.wasm
+*.log
+
+# Original datasets and generated research artifacts
+outputs/
+uploads/
+tmp/
+*.ifc
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.dot
+*.dotx
+*.pptx
+*.pdf
+*.zip
+*.7z
+*.bak
+*.tmp
+~$*
+
+# Local editor and agent state
+.codex*/
+.superpowers/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

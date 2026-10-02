@@ -1,0 +1,27 @@
+% Requires \usepackage{graphicx}.
+
+% Carbon-accounting paths
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/fig_carbon_accounting_paths.pdf}
+    \caption{Carbon-accounting paths represented in the case knowledge graph. Material emissions trace from a building component through a material consumption record; attributed factory energy follows an analogous component-level path; process-perspective energy traces through production stages, activities, and resources without requiring product attribution.}
+    \label{fig:carbon-accounting-paths}
+\end{figure*}
+
+% System pipeline
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/fig_system_pipeline.pdf}
+    \caption{Auditable carbon question-answering pipeline. BIM, material-factor, and factory-energy inputs are integrated into a knowledge graph; carbon records are validated and computed before a typed CarbonQL program is compiled and deterministically executed. The output retains its accounting perspective, execution status, and traceability evidence.}
+    \label{fig:system-pipeline}
+\end{figure*}
+
+% Baseline comparison
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/fig_baseline_comparison.pdf}
+    \caption{Key-free numeric performance on 90 numeric-bearing questions. Constructing the graph improves the prose baseline, while typed compilation and deterministic execution provide the largest gain. The error bar reports the standard deviation of full-system strict accuracy across three runs.}
+    \label{fig:baseline-comparison}
+\end{figure}
+
+% Compiler-backbone figures removed from main manuscript (Section 4.3.6 dropped).

@@ -1,0 +1,43 @@
+{
+  "factorWorkbook": {
+    "path": "..\\..\\outputs\\research_experiments\\case_study_facts_20260715\\co2e_complete_factors\\Embodied_Carbon_Coefficients_Hong_Kong_CO2e_Complete_2026-07-15.xlsx",
+    "sha256": "60A71D2FCAAD3A38CD7D8B86A9175E346D035DDC7B29EE3DEE2E7E34F69C3E06",
+    "sizeBytes": 30242
+  },
+  "factoryInput": {
+    "path": "..\\..\\outputs\\research_experiments\\factory_data_consolidation_20260721\\factory_data_consolidated.json",
+    "sha256": "D0282B7A7B3D4508311EBADAEEB2D99103B09D5649AD805AB929C4CBCC9B873C",
+    "sizeBytes": 246106
+  },
+  "factoryTargetMap": {
+    "path": "typeb_20260927_factory_target_map.json",
+    "sha256": "8FCEC066E8780B9234A851F279700DF6A9F5771BB490933BE8DA52E188347E6F",
+    "sizeBytes": 1902
+  },
+  "generatedAtUtc": "2026-09-27T12:30:00Z",
+  "ifc": {
+    "path": "typeb_nomep.ifc",
+    "sha256": "EC45C5DD24D0E2DD3BEA7A8707490F77D82913E285B5DB850C95F71611F4887B",
+    "sizeBytes": 24634187
+  },
+  "includeOpenings": false,
+  "materialEvidence": {
+    "path": "m23_typeb_material_evidence.json",
+    "sha256": "CFF4E91C64A0B24D018BC6A3BE2913C7A266E6D3A0172A0CA460EEE9FD09E22F",
+    "sizeBytes": 356656
+  },
+  "module": {
+    "identitySource": "case_manifest",
+    "name": "Type-B Module (MEP stripped)",
+    "sourceIdentity": "TypeB"
+  },
+  "ontology": {
+    "path": "..\\..\\mic-carbon-ontology.ttl",
+    "sha256": "907450A5065492AAD7FAFA27AB278B0CB7962C185484445EB83CF32811D09940",
+    "sizeBytes": 8833
+  },
+  "releaseProfile": "controlled-fixture",
+  "releaseReady": true,
+  "requestedScope": "A1-A3",
+  "schemaVersion": "m23-canonical-v2"
+}

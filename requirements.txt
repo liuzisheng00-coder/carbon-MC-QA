@@ -1,0 +1,10 @@
+# Versions present in the source verification environment (Python 3.12).
+fastapi==0.136.1
+pydantic==2.13.3
+uvicorn==0.46.0
+python-multipart==0.0.27
+openpyxl==3.1.5
+pandas==2.2.2
+pypdf==6.10.2
+rdflib==7.6.0
+ifcopenshell==0.8.2

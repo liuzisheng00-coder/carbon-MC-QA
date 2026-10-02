@@ -1,0 +1,39 @@
+{
+  "factorWorkbook": {
+    "path": "../../outputs/research_experiments/case_study_facts_20260715/co2e_complete_factors/Embodied_Carbon_Coefficients_Hong_Kong_CO2e_Complete_2026-07-15.xlsx",
+    "sha256": "60A71D2FCAAD3A38CD7D8B86A9175E346D035DDC7B29EE3DEE2E7E34F69C3E06",
+    "sizeBytes": 30242
+  },
+  "factoryInput": {
+    "path": "../../outputs/research_experiments/factory_data_consolidation_20260721/factory_data_consolidated.json",
+    "sha256": "D0282B7A7B3D4508311EBADAEEB2D99103B09D5649AD805AB929C4CBCC9B873C",
+    "sizeBytes": 246106
+  },
+  "factoryTargetMap": {
+    "path": "typed_completed_20260718_factory_target_map.json",
+    "sha256": "B4911348902ED9C59B5C870EA5A0858A4830586480DB0BF59B6522BA96E37145",
+    "sizeBytes": 2026
+  },
+  "generatedAtUtc": "2026-07-21T00:00:00Z",
+  "ifc": {
+    "path": "../../typed_completed.ifc",
+    "sha256": "9934A332500BCBDA7EA40835803546982926F99B91CC84F229D59721807B937B",
+    "sizeBytes": 30277955
+  },
+  "includeOpenings": false,
+  "materialEvidence": null,
+  "module": {
+    "identitySource": "case_manifest",
+    "name": "Main Modularization Model",
+    "sourceIdentity": "Main_Modularization_Model"
+  },
+  "ontology": {
+    "path": "../../mic-carbon-ontology.ttl",
+    "sha256": "907450A5065492AAD7FAFA27AB278B0CB7962C185484445EB83CF32811D09940",
+    "sizeBytes": 8833
+  },
+  "releaseProfile": "actual-case",
+  "releaseReady": false,
+  "requestedScope": "A1-A3",
+  "schemaVersion": "m23-canonical-v2"
+}

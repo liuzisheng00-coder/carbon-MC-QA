@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "source_ifc_file": "26_most_complete_material_qto_completed_with_gnn_material_predictions.ifc",
+  "source_ifc_sha256": "bf46b66047a0f42a1ba3c7119e9257e1ef92c002827723a0a6d1d7f026a78bd7",
+  "target_ifc_file": "typed_completed_20260718.ifc",
+  "target_ifc_sha256": "9934a332500bcbda7ea40835803546982926f99b91cc84f229d59721807b937b",
+  "mapping_scope": "Four component-level targets referenced by the factory energy dataset",
+  "mapping_method": "Exact IFC class, family/type mark, storey, and constant Revit tag offset (-302) within the four-record sequence",
+  "component_global_id_map": {
+    "3czbugqbT86PTcmnme1il$": "3czbugqbT86PTcmnme1im9",
+    "3czbugqbT86PTcmnme1ilv": "3czbugqbT86PTcmnme1imB",
+    "3czbugqbT86PTcmnme1ilx": "3czbugqbT86PTcmnme1im5",
+    "3czbugqbT86PTcmnme1ilr": "3czbugqbT86PTcmnme1im7"
+  },
+  "mapping_evidence": [
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1il$",
+      "target_global_id": "3czbugqbT86PTcmnme1im9",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1",
+      "storey": "GF",
+      "source_revit_tag": 2135186,
+      "target_revit_tag": 2134884,
+      "tag_delta": -302
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilv",
+      "target_global_id": "3czbugqbT86PTcmnme1imB",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1",
+      "storey": "GF",
+      "source_revit_tag": 2135188,
+      "target_revit_tag": 2134886,
+      "tag_delta": -302
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilx",
+      "target_global_id": "3czbugqbT86PTcmnme1im5",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B3",
+      "storey": "GF",
+      "source_revit_tag": 2135190,
+      "target_revit_tag": 2134888,
+      "tag_delta": -302
+    },
+    {
+      "source_global_id": "3czbugqbT86PTcmnme1ilr",
+      "target_global_id": "3czbugqbT86PTcmnme1im7",
+      "ifc_type": "IfcBeam",
+      "type_mark": "B1a",
+      "storey": "1F",
+      "source_revit_tag": 2135192,
+      "target_revit_tag": 2134890,
+      "tag_delta": -302
+    }
+  ]
+}

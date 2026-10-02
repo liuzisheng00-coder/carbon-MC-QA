@@ -1,0 +1,291 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ifcowl: <https://standards.buildingsmart.org/IFC/DEV/IFC4_3/OWL#> .
+@prefix bim: <https://w3id.org/dm2c/bim#> .
+@prefix mc: <https://w3id.org/dm2c/manufacturing#> .
+@prefix carbon: <https://w3id.org/dm2c/carbon#> .
+@prefix integr: <https://w3id.org/dm2c/integration#> .
+
+
+<https://w3id.org/dm2c/ontology/m23-canonical-v2>
+    rdf:type owl:Ontology ;
+    owl:versionInfo "m23-canonical-v2" ;
+    rdfs:label "DM2C M2.3 canonical IFC-centred carbon knowledge graph ontology"@en ;
+    rdfs:comment "Canonical TBox for the 16 application classes, 17 principal predicates and three optional process-context predicates used by M2.3 schema v2. Structural properties carry the prefix of the sub-ontology that defines them (bim:, mc:, carbon:); properties that attach a carbon record to a design or manufacturing entity carry integr:. The LPG stores local names only; the 20 property names are unique across the four namespaces."@en .
+
+
+# Explicit class-role annotations distinguish the supported runtime classes
+# from the four abstract TBox parents without relying on OWL class counts.
+integr:instantiable
+    rdf:type owl:AnnotationProperty ;
+    rdfs:range xsd:boolean .
+
+integr:abstract
+    rdf:type owl:AnnotationProperty ;
+    rdfs:range xsd:boolean .
+
+
+# -----------------------------------------------------------------------------
+# Abstract TBox parents: never emitted as LPG instance labels
+# -----------------------------------------------------------------------------
+
+bim:ProductObject
+    rdf:type owl:Class ;
+    integr:abstract true ;
+    rdfs:subClassOf ifcowl:IfcProduct ;
+    rdfs:label "Product object"@en .
+
+bim:ProductType
+    rdf:type owl:Class ;
+    integr:abstract true ;
+    rdfs:label "Product type"@en .
+
+mc:ProcessElement
+    rdf:type owl:Class ;
+    integr:abstract true ;
+    rdfs:label "Process element"@en .
+
+carbon:ConsumptionDriver
+    rdf:type owl:Class ;
+    integr:abstract true ;
+    rdfs:label "Consumption driver"@en .
+
+
+# -----------------------------------------------------------------------------
+# Sixteen instantiable application classes
+# -----------------------------------------------------------------------------
+
+mc:ProductionBatch
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:label "Production batch"@en .
+
+bim:ModularUnit
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf bim:ProductObject ;
+    rdfs:label "Modular unit"@en .
+
+bim:BuildingComponent
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf bim:ProductObject ;
+    rdfs:label "Building component"@en .
+
+bim:ComponentType
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf bim:ProductType ;
+    rdfs:label "Component type"@en .
+
+bim:IfcMaterial
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf ifcowl:IfcMaterial ;
+    rdfs:label "IFC material"@en .
+
+bim:DesignQuantity
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf ifcowl:IfcPhysicalQuantity ;
+    rdfs:label "Design quantity"@en .
+
+mc:ManufacturingProcessTemplate
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf mc:ProcessElement ;
+    rdfs:label "Manufacturing process template"@en .
+
+mc:ProductionStage
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf mc:ProcessElement ;
+    rdfs:label "Production stage"@en .
+
+mc:ManufacturingActivity
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf mc:ProcessElement ;
+    rdfs:label "Manufacturing activity"@en .
+
+mc:ManufacturingResource
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:label "Manufacturing resource"@en .
+
+carbon:MaterialConsumption
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf carbon:ConsumptionDriver ;
+    rdfs:label "Material consumption"@en .
+
+carbon:EnergyConsumption
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:subClassOf carbon:ConsumptionDriver ;
+    rdfs:label "Energy consumption"@en .
+
+carbon:ConsumptionQuantity
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:label "Consumption quantity"@en .
+
+carbon:EmissionFactor
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:label "Emission factor"@en .
+
+carbon:EnergyCarrier
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:label "Energy carrier"@en .
+
+carbon:CarbonEmission
+    rdf:type owl:Class ;
+    integr:instantiable true ;
+    rdfs:label "Unaggregated carbon emission"@en .
+
+
+# -----------------------------------------------------------------------------
+# Twenty object properties.
+# Namespace rule: structural properties carry the prefix of the sub-ontology
+# that defines them; properties that attach a carbon record to a design or
+# manufacturing entity carry integr:. Shared consumption paths use the abstract
+# ConsumptionDriver parent so that repeated RDFS domains/ranges cannot create
+# an unintended MaterialConsumption-and-EnergyConsumption intersection.
+# -----------------------------------------------------------------------------
+
+# --- bim: design structure (4) ---
+
+bim:containsComponent
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain bim:ModularUnit ;
+    rdfs:range bim:BuildingComponent .
+
+bim:hasComponentType
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain bim:BuildingComponent ;
+    rdfs:range bim:ComponentType .
+
+bim:hasMaterial
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain bim:BuildingComponent ;
+    rdfs:range bim:IfcMaterial .
+
+bim:hasDesignQuantity
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain bim:BuildingComponent ;
+    rdfs:range bim:DesignQuantity .
+
+# --- mc: manufacturing structure and product-to-process entry (7) ---
+
+mc:produces
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain mc:ProductionBatch ;
+    rdfs:range bim:ModularUnit .
+
+mc:hasProcessTemplate
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain [
+        owl:unionOf (
+            bim:ProductObject
+            bim:ComponentType
+        )
+    ] ;
+    rdfs:range mc:ManufacturingProcessTemplate .
+
+mc:hasStage
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain mc:ManufacturingProcessTemplate ;
+    rdfs:range mc:ProductionStage .
+
+mc:hasActivity
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain mc:ProductionStage ;
+    rdfs:range mc:ManufacturingActivity .
+
+mc:usesResource
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain mc:ManufacturingActivity ;
+    rdfs:range mc:ManufacturingResource .
+
+mc:manufacturedBy
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain bim:ProductObject ;
+    rdfs:range mc:ManufacturingActivity .
+
+mc:directlyPrecedes
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain mc:ManufacturingActivity ;
+    rdfs:range mc:ManufacturingActivity .
+
+# --- carbon: calculation chain (4) ---
+
+carbon:hasQuantity
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:ConsumptionDriver ;
+    rdfs:range carbon:ConsumptionQuantity .
+
+carbon:hasFactor
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:ConsumptionDriver ;
+    rdfs:range carbon:EmissionFactor .
+
+carbon:ofCarrier
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:EnergyConsumption ;
+    rdfs:range carbon:EnergyCarrier .
+
+carbon:hasCarbonDriver
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:CarbonEmission ;
+    rdfs:range carbon:ConsumptionDriver .
+
+# --- integr: carbon record to design / manufacturing entity (5) ---
+
+integr:recordedForObject
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:ConsumptionDriver ;
+    rdfs:range bim:ProductObject .
+
+integr:ofMaterial
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:MaterialConsumption ;
+    rdfs:range bim:IfcMaterial .
+
+integr:derivedFrom
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:ConsumptionQuantity ;
+    rdfs:range bim:DesignQuantity .
+
+integr:associatedWithProcess
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:EnergyConsumption ;
+    rdfs:range [
+        owl:unionOf (
+            mc:ProductionStage
+            mc:ManufacturingActivity
+        )
+    ] .
+
+integr:recordedForResource
+    rdf:type owl:ObjectProperty ;
+    rdfs:domain carbon:EnergyConsumption ;
+    rdfs:range mc:ManufacturingResource .
+
+
+# -----------------------------------------------------------------------------
+# Manufacturing resource datatype properties
+# -----------------------------------------------------------------------------
+
+mc:resourceKind
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain mc:ManufacturingResource ;
+    rdfs:range xsd:string .
+
+mc:powerKw
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain mc:ManufacturingResource ;
+    rdfs:range xsd:decimal .

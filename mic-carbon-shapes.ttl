@@ -1,0 +1,97 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix bim: <https://w3id.org/dm2c/bim#> .
+@prefix carbon: <https://w3id.org/dm2c/carbon#> .
+@prefix integr: <https://w3id.org/dm2c/integration#> .
+@prefix shapes: <https://w3id.org/dm2c/shapes#> .
+
+
+shapes:CarbonEmissionShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass carbon:CarbonEmission ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path carbon:hasCarbonDriver ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:ConsumptionDriver
+    ] .
+
+
+shapes:MaterialConsumptionShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass carbon:MaterialConsumption ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path integr:recordedForObject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class bim:ProductObject
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path integr:ofMaterial ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class bim:IfcMaterial
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path carbon:hasQuantity ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:ConsumptionQuantity
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path carbon:hasFactor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:EmissionFactor
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path [ sh:inversePath carbon:hasCarbonDriver ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:CarbonEmission
+    ] .
+
+
+shapes:EnergyConsumptionShape
+    rdf:type sh:NodeShape ;
+    sh:targetClass carbon:EnergyConsumption ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path carbon:hasQuantity ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:ConsumptionQuantity
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path carbon:hasFactor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:EmissionFactor
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path carbon:ofCarrier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:EnergyCarrier
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path integr:recordedForObject ;
+        sh:minCount 0 ;
+        sh:class bim:ProductObject
+    ] ;
+    sh:property [
+        rdf:type sh:PropertyShape ;
+        sh:path [ sh:inversePath carbon:hasCarbonDriver ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class carbon:CarbonEmission
+    ] .

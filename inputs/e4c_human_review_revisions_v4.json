@@ -1,0 +1,130 @@
+[
+  {
+    "base_case_id": "e4c_1_10_source_hole",
+    "new_case_id": "e4c_1_10_implicit_view",
+    "question": "For each selected item, show its embodied carbon by kind of material.",
+    "revision_kind": "implicit_view_resolution",
+    "perspective_evidence": ["selected item", "embodied carbon", "kind of material"],
+    "review_rationale": "Material wording resolves the source without asking the user to choose an internal view."
+  },
+  {
+    "base_case_id": "e4c_1_11_group_hole",
+    "new_case_id": "e4c_1_11_implicit_grouping",
+    "question": "Across the model, show each building item's embodied carbon by kind of material.",
+    "revision_kind": "implicit_grouping_resolution",
+    "perspective_evidence": ["Across the model", "each building item's", "embodied carbon", "kind of material"],
+    "review_rationale": "Project-wide building-item and material wording supplies the requested grouping without asking for an extra internal dimension."
+  },
+  {
+    "base_case_id": "e4c_2_10_source_hole",
+    "new_case_id": "e4c_2_10_implicit_view",
+    "question": "For each selected item, show its factory emissions from electricity and diesel.",
+    "revision_kind": "implicit_view_resolution",
+    "perspective_evidence": ["selected item", "factory emissions", "electricity and diesel"],
+    "review_rationale": "Factory-emission and energy-carrier wording resolves the process source without exposing an internal view choice."
+  },
+  {
+    "base_case_id": "e4c_2_11_group_hole",
+    "new_case_id": "e4c_2_11_implicit_grouping",
+    "question": "Across the model, show each building item's factory emissions from electricity and diesel.",
+    "revision_kind": "implicit_grouping_resolution",
+    "perspective_evidence": ["Across the model", "each building item's", "factory emissions", "electricity and diesel"],
+    "review_rationale": "Project-wide building-item and energy wording supplies the requested grouping without an unnecessary clarification."
+  },
+  {
+    "base_case_id": "e4c_3_10_source_hole",
+    "new_case_id": "e4c_3_10_implicit_view",
+    "question": "For what I selected, separate carbon from kinds of material and from electricity or diesel used in production.",
+    "revision_kind": "implicit_view_resolution",
+    "perspective_evidence": ["what I selected", "kinds of material", "electricity or diesel used in production"],
+    "review_rationale": "Explicit material and production-energy wording resolves both sources and requests their separation."
+  },
+  {
+    "base_case_id": "e4c_3_11_group_hole",
+    "new_case_id": "e4c_3_11_implicit_grouping",
+    "question": "Across the model, separate carbon by kind of material and by electricity or diesel used in production.",
+    "revision_kind": "implicit_grouping_resolution",
+    "perspective_evidence": ["Across the model", "kind of material", "electricity or diesel used in production"],
+    "review_rationale": "Project-wide material and production-energy wording supplies the mixed-source grouping without an extra internal dimension."
+  },
+  {
+    "base_case_id": "e4c_4_10_source_hole",
+    "new_case_id": "e4c_4_10_implicit_view",
+    "question": "For each selected item, separate its carbon by kind of material and by electricity or diesel used to make it.",
+    "revision_kind": "implicit_view_resolution",
+    "perspective_evidence": ["selected item", "kind of material", "electricity or diesel used to make it"],
+    "review_rationale": "Item, material, and production-energy wording resolves both sources and all requested dimensions."
+  },
+  {
+    "base_case_id": "e4c_4_11_group_hole",
+    "new_case_id": "e4c_4_11_implicit_grouping",
+    "question": "Across the model, separate each building item's carbon by kind of material and by electricity or diesel used to make it.",
+    "revision_kind": "implicit_grouping_resolution",
+    "perspective_evidence": ["Across the model", "each building item's", "kind of material", "electricity or diesel used to make it"],
+    "review_rationale": "Project-wide item, material, and production-energy wording supplies all requested grouping dimensions."
+  },
+  {
+    "base_case_id": "e4c_4_01",
+    "new_case_id": "e4c_4_01",
+    "question": "For each item I selected, show the combined carbon by kind of material and by electricity or diesel used to make it.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["combined carbon", "kind of material", "electricity or diesel used to make it"],
+    "review_rationale": "The ordinary combined-account wording supports both sources but does not request attribution-based filtering."
+  },
+  {
+    "base_case_id": "e4c_4_04",
+    "new_case_id": "e4c_4_04",
+    "question": "Among the items I selected, rank the five largest combined contributions by item, kind of material, and electricity or diesel use.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["combined contributions", "kind of material", "electricity or diesel use"],
+    "review_rationale": "The ranking combines ordinary material and energy contributions without requesting joint attribution."
+  },
+  {
+    "base_case_id": "e4c_4_05",
+    "new_case_id": "e4c_4_05",
+    "question": "Rank the top six modular-unit contributors across linked materials and factory stages.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["across linked materials and factory stages"],
+    "review_rationale": "The cross-source ranking contains no language requesting attribution-based filtering."
+  },
+  {
+    "base_case_id": "e4c_4_06",
+    "new_case_id": "e4c_4_06",
+    "question": "Compare the selected items together with their material types and production use of electricity or diesel, and tell me which contribution is larger.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["selected items together with their material types", "production use of electricity or diesel"],
+    "review_rationale": "The comparison names both ordinary source families but does not request joint attribution."
+  },
+  {
+    "base_case_id": "e4c_4_07",
+    "new_case_id": "e4c_4_07",
+    "question": "Compare component types across linked materials and production stages and say which contribution is greater.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["across linked materials and production stages"],
+    "review_rationale": "The cross-source comparison contains no language requesting attribution-based filtering."
+  },
+  {
+    "base_case_id": "e4c_4_08",
+    "new_case_id": "e4c_4_08",
+    "question": "For each selected item and material type, show where the carbon assigned to each production area or machine came from.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["selected item and material type", "each production area or machine"],
+    "review_rationale": "The provenance request spans material and production dimensions but does not ask for a jointly attributed dual-source subset."
+  },
+  {
+    "base_case_id": "e4c_4_09_unresolved",
+    "new_case_id": "e4c_4_09_unresolved",
+    "question": "For the object I selected, show combined carbon by material type and electricity or diesel used to make it.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["combined carbon", "material type", "electricity or diesel used to make it"],
+    "review_rationale": "The ordinary combined-account wording supports both sources but does not request attribution-based filtering."
+  },
+  {
+    "base_case_id": "e4c_4_12_ambiguous",
+    "new_case_id": "e4c_4_12_ambiguous",
+    "question": "For the beam, show carbon by material type and by electricity or diesel used to make it.",
+    "revision_kind": "automatic_join_correction",
+    "perspective_evidence": ["carbon by material type", "electricity or diesel used to make it"],
+    "review_rationale": "The ordinary material and production-energy breakdown does not request attribution-based filtering."
+  }
+]

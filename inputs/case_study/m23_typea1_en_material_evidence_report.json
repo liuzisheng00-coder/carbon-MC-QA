@@ -1,0 +1,2527 @@
+{
+  "counts": {
+    "acceptedRecords": 139,
+    "materialAssociations": 476,
+    "records": 147,
+    "rejectedRecords": 8,
+    "skippedRecords": 329
+  },
+  "inputs": {
+    "factorWorkbook": "F:\\论文4\\outputs\\research_experiments\\case_study_facts_20260715\\co2e_complete_factors\\Embodied_Carbon_Coefficients_Hong_Kong_CO2e_Complete_2026-07-15.xlsx",
+    "ifc": "F:\\论文4\\typea1_full_en.ifc",
+    "materialPool": "F:\\论文4\\material_pool_enhanced1.xlsx"
+  },
+  "materialBreakdown": {
+    "Aluminium": {
+      "acceptedRecords": 16,
+      "carbonKgCO2e": 90.27185799688472,
+      "massKg": 10.158885662489842
+    },
+    "Calcium Silicate": {
+      "acceptedRecords": 11,
+      "carbonKgCO2e": 837.0467892029293,
+      "massKg": 1075.4782988546726
+    },
+    "Ceramics Tiles": {
+      "acceptedRecords": 0,
+      "carbonKgCO2e": 0.0,
+      "massKg": 0.0
+    },
+    "Concrete": {
+      "acceptedRecords": 3,
+      "carbonKgCO2e": 822.7355630203806,
+      "massKg": 5876.682593002718
+    },
+    "Fibre Cement": {
+      "acceptedRecords": 0,
+      "carbonKgCO2e": 0.0,
+      "massKg": 0.0
+    },
+    "Glass": {
+      "acceptedRecords": 0,
+      "carbonKgCO2e": 0.0,
+      "massKg": 0.0
+    },
+    "Rockwool": {
+      "acceptedRecords": 5,
+      "carbonKgCO2e": 71.63950713346865,
+      "massKg": 52.101459733431746
+    },
+    "Steel": {
+      "acceptedRecords": 104,
+      "carbonKgCO2e": 4400.539247313791,
+      "massKg": 2213.5509292322886
+    }
+  },
+  "notes": {
+    "slabReinforcement": "slab reinforcement excluded; Pset_ReinforcementBarPitchOfSlab can support future calculation"
+  },
+  "rejectedRecords": [
+    {
+      "associationId": "MaterialAssociation:41a11fafa98d6728917f6901e0b98dca0f4e942ea6cb7efeaacf4fadcbeb32bc",
+      "componentId": "BuildingComponent:3cfc5a750523bde17b136e47bc268308216ad4ea6a7083d9a9b5605793700142",
+      "formulaCode": "volume_density",
+      "materialName": "Door Glass",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:42e7f784c19b974a999c5d83ebb6b3c629b9a9378e2c7b88f9a4eef3e02caed0",
+      "semanticKey": "toughened_glass"
+    },
+    {
+      "associationId": "MaterialAssociation:439367897b9d5561de6f57d8cea07cf52f8ea38fb0c3f9072ba096164a03c91e",
+      "componentId": "BuildingComponent:3cfc5a750523bde17b136e47bc268308216ad4ea6a7083d9a9b5605793700142",
+      "formulaCode": "volume_density",
+      "materialName": "Tempered glass",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:df958d9fd9eb999ba0efda17bd137b6fed02d45100671e2cb98ed085f1c9d914",
+      "semanticKey": "toughened_glass"
+    },
+    {
+      "associationId": "MaterialAssociation:737f703e0f1fe6aa8caaa4eaafb6be74ac8875d894b4815542184e391b8b988b",
+      "componentId": "BuildingComponent:3cfc5a750523bde17b136e47bc268308216ad4ea6a7083d9a9b5605793700142",
+      "formulaCode": "volume_density",
+      "materialName": "Door Glass",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:8a392b2658a82bd905a7904c2c46d8d51dbb72ec0fe3a2a83ee08be8bb81a364",
+      "semanticKey": "toughened_glass"
+    },
+    {
+      "associationId": "MaterialAssociation:5e30915492479407a5ae948e05923021fadbcccbdb4d34f85e62bf4f21de7bf8",
+      "componentId": "BuildingComponent:5602561dd416437859dc298568f8ae63ee4eeec2468d917560e5c1c7eb84c216",
+      "formulaCode": "area_thickness_density",
+      "materialName": "<Unnamed>",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:08c2c1a9cb34efd54c9e22c6e76098edfde9c0674fbab9cedb5c8c32111bdfcf",
+      "semanticKey": "ceramics_tiles"
+    },
+    {
+      "associationId": "MaterialAssociation:0817ef7f7d7e9ea885cd0f09bc34252678e30a2ee1ac6030f640439328eac78c",
+      "componentId": "BuildingComponent:a31547330158f2973912086a6d8b5eb2eb8be443276b9e27704bd00097512f4a",
+      "formulaCode": "volume_density",
+      "materialName": "Tempered glass",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:f6cdf28e9140e93792c350e689afcc2a01f30ad31fd8ae4057b722f52656d461",
+      "semanticKey": "toughened_glass"
+    },
+    {
+      "associationId": "MaterialAssociation:25aac6e697e24d8e08a4572087adff5c73461dfa1c4e4a9fa8eb94f269ec5375",
+      "componentId": "BuildingComponent:a31547330158f2973912086a6d8b5eb2eb8be443276b9e27704bd00097512f4a",
+      "formulaCode": "volume_density",
+      "materialName": "Door Glass",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:0e406595264e2cd82a626c424599c312e920e4ea4517d6584179f7edc974e178",
+      "semanticKey": "toughened_glass"
+    },
+    {
+      "associationId": "MaterialAssociation:9a82eefdd0329ebf28e94e4db7a70552bbaf48f116b54c2a042ca85f9bab8ad1",
+      "componentId": "BuildingComponent:a31547330158f2973912086a6d8b5eb2eb8be443276b9e27704bd00097512f4a",
+      "formulaCode": "volume_density",
+      "materialName": "Door Glass",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:79bb5272f066ae7d1f8bd43c968b0c2257192f944aa61c35337bca2f55382a92",
+      "semanticKey": "toughened_glass"
+    },
+    {
+      "associationId": "MaterialAssociation:0db442bcafaa031848348eee9cf8fa817038d6109bab7eced0a326dbe28d3d0f",
+      "componentId": "BuildingComponent:f0bb493874667b90108da8397e97302ea4055cc94e0ba32182e865f7fc04117a",
+      "formulaCode": "area_thickness_density",
+      "materialName": "<Unnamed>",
+      "reasonCode": "rejected_missing_geometry",
+      "recordId": "MaterialEvidenceRecord:1de0e9e89d6adfd49da87cb616a680d6e8eab03d81f2bc49ee8bc85c81d249d0",
+      "semanticKey": "ceramics_tiles"
+    }
+  ],
+  "schemaVersion": "m23-canonical-v2",
+  "semanticCounts": {
+    "aluminium_profile": 16,
+    "calcium_silicate": 11,
+    "ceramics_tiles": 2,
+    "concrete_rc_25_30": 3,
+    "light_gauge_steel": 29,
+    "rockwool": 5,
+    "steel_section": 75,
+    "toughened_glass": 6
+  },
+  "skippedCounts": {
+    "duplicate_material_layer": 35,
+    "factor_not_mapped": 292,
+    "slab_finish_secondary_material_ignored": 2
+  },
+  "skippedRecords": [
+    {
+      "associationId": "MaterialAssociation:86ebb781d58909ad824a89e5357f1d8db1b4ee293c36c602caa3051b5c7dca3b",
+      "componentId": "BuildingComponent:007432cb03b54e908f9a7c5cf5dc2c109cdc8acb8076ec6a03b9930049d3327e",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:001d72e7879b0e5cd3075be05e39b19f7f0108971b52f612db1cdab163edfc15",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:bf17138926ff9662ee1c397b178ee864983ce81f8761ef5500c1a694736609ac",
+      "componentId": "BuildingComponent:01bd1817f8e501d66d40aeecc013b595ba23541a86505b89040d6bf6f0be17af",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:35ec4096587e4185af68c8504fb2e79ef73466c0a31069389a4fe08e4520e42d",
+      "componentId": "BuildingComponent:0466e768c31b8e6309edaa6848d3ed3e13bce87acc415b116c0a87f685269930",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ac15cf58058a8b4f85fcf5aea47122c264297ffca6291378e399012c22393a51",
+      "componentId": "BuildingComponent:04d2a3038523edb9899175e2fe8e527429487ea3bb4e50e5d8b9995b3f00169e",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:374d0d2a6eebd63b15bf02d56883321800e81a4030364ba57f2df9b90afa1ac7",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:ee9e8f7fe83697d10e4fab579d1ccc7d730570baa757a6e884310a529936e8ef",
+      "componentId": "BuildingComponent:065183c7fcb4f8a7f0baa2297c0d9e44a34053f6c253f75e625450a4d8d70dbe",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f02a89728f115203d820d38f9302be2bd21544b940625354fce3667b69eace24",
+      "componentId": "BuildingComponent:074c42aac3cfdb50d315ec5bf2fa5101f02cabd09f2fcc2b46ef0562f3bf911b",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:d2b3ddbce010e849d17167bc3bd9335cfc93130447b558eab0506edd224750bb",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:446adf0227fa6d8cd161cd3bade961204358b170e616a5f38a8bfca7de2f45a9",
+      "componentId": "BuildingComponent:0855e81f7bb4764911f0c6422bb794d998201e27d8367e63b09296776991a1dc",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b3452e44cd10cedba6a21c2b6d588904e13e72bdc4410ad5077770caa37b8d23",
+      "componentId": "BuildingComponent:095897daf3b3cf6eff80563ed9ee55a4cd490f4c9aee6a08b04a6b693d587ce8",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9f35b187e648167beeae05104fd7c5556615ea7b3f7044bb8f3c0790eb0e016b",
+      "componentId": "BuildingComponent:09f23116918e1db105723ce8fbfe35f09639b6f70323ec08a48cd06ebc5b5df4",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6f1c1236733e7b960273a9fef562034fb83fbb4d1c41355d22802e01558e5046",
+      "componentId": "BuildingComponent:0a031c220e87c7cee34c558fab5cbfc71a71838a512730d74e6628e255c51577",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:54b79650fc6cca7e4f9a4767320f47556d7f52e3e464556b6c45bca110481f39",
+      "componentId": "BuildingComponent:0b63a4705cab945ca804413fe0b2e9a5e23fde233258bba14fa48d3c595e574a",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7573399c92e0f67ea5e03109620b44adf0a287fec1b4df901c5c45a91e974c7d",
+      "componentId": "BuildingComponent:0b63a4705cab945ca804413fe0b2e9a5e23fde233258bba14fa48d3c595e574a",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:142039282346a8c21520a4da681aa9e3ded193a3ec4fd87aad93c0e2199c2ccf",
+      "componentId": "BuildingComponent:0b6c98e66dc4f9da3ef4e136297ebbf53e3f79b53aec2f1bdd8445017f000d1c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:76c4b2e64ce0a71753dfe42e5a588d0b657e177196fdb134d9eb2998e07a45a4",
+      "componentId": "BuildingComponent:0b9c34c56ad4c6bdf4d930450a3a2958c861ae3b6a52f531f11a2cc10055768c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:94e0ea35cbcb7fae72bb902647ef9d3c202dd8ff05d1e8b138a1c4df1fe01a83",
+      "componentId": "BuildingComponent:0bcd95cee78747b163279b039671b8860b9a54fe861a4b4eb96b812785d403a6",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b4a05e964c73eebb7db8cac117797f3dd91ac8253acc5c4fde7fb6a982688629",
+      "componentId": "BuildingComponent:0cffb9238571975c13b8792c6bb0def98b34b4c63e4a17654bd581525cd30a31",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:cbc663954eb4719295b67d9bd7cd0bda8010a5328dac3e4cc5e4fb5f1b5fd868",
+      "componentId": "BuildingComponent:0d371c9a37b1f759fa9eccbe202478e06b4fcfc9cb7eb8aba96a9e37d281b0e5",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1a3e072cdf0c7029bae51333883f1d071fa437604cc1910c8c058431889ffd82",
+      "componentId": "BuildingComponent:0db80e4e663498b960fe83f93a28a964b17ed7b189b6c448d9ce33766af0ad36",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:36300c5b018961eaf1e8bbe7e6d8d48b19a83e935453afe9d6c880651ee0381d",
+      "componentId": "BuildingComponent:0db80e4e663498b960fe83f93a28a964b17ed7b189b6c448d9ce33766af0ad36",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d413b49c7ea42daa977dfcfddede00987a8044034014b7fd7dcbc4a4442e9962",
+      "componentId": "BuildingComponent:0e9b768bdb1c5bd40691778b796d4beba84c317f60d41374af157140f9c79698",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5e53031c978416e3c49be0e4c849118ce797e520747926ae594c8fc0edec87e2",
+      "componentId": "BuildingComponent:0ea55e4550bcb8a54256d888c034dd748ad5a14c5f23dbe4e0e26c2e86501343",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f5688d039ef6c93f6c6d005d479ab9924e85ed8d7e5b8a0b109ce3beecdacbd3",
+      "componentId": "BuildingComponent:0f58c8d7da61e3eb975ddb5f7cb01e3f151b7b44cc8792f48a563fd634fb6cba",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a7122133b74efdb516cbdcdab7a0beec661dc4c6e183ba1883a093d99aea587b",
+      "componentId": "BuildingComponent:0f646e6fa7f3e88cb006249d8267af44f2641d928f762e1c922858bf83cad20c",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fbc2bf27d70126d640ba6e02a37b142eb10c5992bb0a736e79ee8d926be953c0",
+      "componentId": "BuildingComponent:11001bed7ef695e7aaa8ef42883e263abf945a18a5333662418e49cd3c3c8fff",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0952ffa1170924a16c9d825e6b79c8fe154cd7c3d9a39d3af6251f9be6921f52",
+      "componentId": "BuildingComponent:1208fab4bf2c79435660098b7ede625c44f4781e83e374e5d9f1e8cd2407c801",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:62e39db4c5f3fff4a4ab327874c9b8fb8726ada5e30561d73385bf5aafcebb3e",
+      "componentId": "BuildingComponent:1324f978860d19c6504d35d9c9c89c12622aa243734482c450b7f1ac0c03f436",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:035bd42a239f7491bcc4b0d551b2e0862a6fbae5a937455fb643b12eeb4906eb",
+      "componentId": "BuildingComponent:1457a2624c888b50289e97b8fcd7b5240154f270995240f715e779b6bf149672",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ea06b6c2a48ae9367e52df7386b82625dec81603a3f5d16698cdba103ffe53b0",
+      "componentId": "BuildingComponent:14638b824a898384bdd4290837aaa64d0d4d31fcc2950541417146cfd46ce042",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:22eef6eb1555ef6180c2343f4444a7e061cea2fdcf7aa827acb1f99d2c73f14f",
+      "componentId": "BuildingComponent:14638b824a898384bdd4290837aaa64d0d4d31fcc2950541417146cfd46ce042",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8ddc16bdb713b9a5785ab735db3ca719e3a051c0a63daaf0cd9a16d94e40c66d",
+      "componentId": "BuildingComponent:14bb9444f544e2714808babcb0a406fbd1113203ea32006dfdeea1ca73bb1061",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e0569ea3b9755bbd4832362b36c3bf61adb3b4227ec8d2faef42e90f7b490fd5",
+      "componentId": "BuildingComponent:17fd2a6e1d69e85287126eae2dc949980a3140c18fc6f0b4e2bec722d99b0302",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6a3c39f0414fdc42d34f04f1cc9965958cf91ffb2b0fea40cac4c87ffbe6ddf0",
+      "componentId": "BuildingComponent:18cb72b1a6d04eaf0d4b7850cc573f2516c115ea362347b7cb28fc919fd248f9",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0a60cc06df44f492113c36ffd0187df613c148657478f69fdde991aa5a149e75",
+      "componentId": "BuildingComponent:1975c16afce200545b55a125d56eeb1d6b750b78ab7ad0bb6dd36f93a0139f31",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:29d824cf834dc974cbbf526276c9a5f3bedcdde5aa288242843d43f253b70b64",
+      "componentId": "BuildingComponent:19ccd5c45bde723f3da2de8b9610f7593067559f1af084be05911d08efbccf25",
+      "ifcClass": "IfcBeam",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:17a29e3874c0fe3233ff194b5ccb9049b2a9923ca6850c269393ec8e4525c416",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:04046542157862135298e659103818902adf051a76858d33fc14283d8f9fafc5",
+      "componentId": "BuildingComponent:1a42883bbbe88623f83287ee58722558a2e0dc5171e4b4b4255515d0d23f0c68",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6007c7ac21e0d0a84a114611428f1ff9e8e20798782f07071c8aef4423d27a38",
+      "componentId": "BuildingComponent:1b7f3f7f8813b9b085979e6c693b1e4eadc2852d26dbe26dec83f1d9b9f54b55",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:aa5b870cc43912d27131087411a445fed164f3c29c63b15b13578e55fa725032",
+      "componentId": "BuildingComponent:1b7f3f7f8813b9b085979e6c693b1e4eadc2852d26dbe26dec83f1d9b9f54b55",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1e22f5b78b6e4fa297fed1285152e9969fd260782c5b93c5e78b1966e25ec1e4",
+      "componentId": "BuildingComponent:1c72eb7b151729a8a86d783594a74d0b78ec0b12ba1e4e159f0f18d9394b6016",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:19ab18b4a6eaf489124699c70e6f9011eea0986a770a8af58ea0563909b0d44b",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:aabb44c460bc2d9793866f11008c5b1039d908a6046b01fe936b212b2cd003e6",
+      "componentId": "BuildingComponent:1e5a6c93ee0942ce38c169ed0a76823b57d5f6e4eff25b1e6cfab74703518b75",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9bc7572a7bf3451f467463c55f8d7533bd90f46d4bbf326ea0c09608a4298df8",
+      "componentId": "BuildingComponent:2015d5cd5b57e90ec5800def494738b1c7b4f3c2527f869086951e5b0e1aad1e",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:90bd9b287ab126fa0754fbe483048c50481196fd4cfb38270abc4fefb9090e00",
+      "componentId": "BuildingComponent:22604e81dfd3d2634985eb89f05fe3fea7e42045a338de4e30c07f327134d685",
+      "ifcClass": "IfcWall",
+      "materialName": "Fired perforated brick",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f16eff9171e2b1e064e456c447a03295a75468678cadd65e030b8b19de529d64",
+      "componentId": "BuildingComponent:22604e81dfd3d2634985eb89f05fe3fea7e42045a338de4e30c07f327134d685",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8869c56b1eb49e3f8e2e4025abbcbbb92a88344b48eed2309cf6864ee0388294",
+      "componentId": "BuildingComponent:229e8fb53b29e982b22479fee80cff95577f09513cc9d94a91e58e7a074fcecd",
+      "ifcClass": "IfcSlab",
+      "materialName": "Cement mortar",
+      "reasonCode": "slab_finish_secondary_material_ignored",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:83fad67277a207359a18fbe59cce0b061351c65601f91a4da45b2ff68aa20ec0",
+      "componentId": "BuildingComponent:22f6e039f5e5adba61e3ee0308e381dbb8795a345b120dd318759b026b07f6f4",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a0d52a57da1d7b1d5e1fe101a9840f85cf2c497e577578b6429c6f64af8ff1f5",
+      "componentId": "BuildingComponent:233081dd7d4b7b629e5a3ef8b67a1eb960df009904305dc3e150a2f4f541cadc",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fb902032e4030829161f51c247811c7ca5792fcc2b970962363b0be201d86ed5",
+      "componentId": "BuildingComponent:233081dd7d4b7b629e5a3ef8b67a1eb960df009904305dc3e150a2f4f541cadc",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:565622c065766bb0b3c277779bb0df1aa350a8c096880a1b9a5e0596a817a56d",
+      "componentId": "BuildingComponent:23893831df9edf4e52d6ea9aa0527a026b4b08a83f17a184d659b2784efae1fc",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6055f885269c0add760f93f9092c4604428b3c864ed5202086ef85f585299110",
+      "componentId": "BuildingComponent:2436b2142a158ac7d72392f3af4098fe3a1f754657e2c1a5cbb1838bb83751a5",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fdb08cf7683270d4a411df704b90d1316420ea7ed5cfad3824c75581b9c65592",
+      "componentId": "BuildingComponent:25889c52d152594c60a4b55ab9027eb8248d86f1685ea83f1a6d25ad099393ae",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:dc24da182bf10cbfe38262bf1a78e79d2612508c83733658919884218475dc54",
+      "componentId": "BuildingComponent:29717a30143fa06fa3a0de41dca10808bda820de9aca412826cb577f3330365f",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:78d494c8b9215e7ca9cc83c37d016ed08e3e68bfd9616359c51ede3ff0f9398a",
+      "componentId": "BuildingComponent:2a918acd4aa145f48841d8fd87524e9d97e499365c396fcf9cbe0555f59162af",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4e6b45baad0af9b00e8eb636bb5a0aec40fc2854224f1c5a85b7a8b71d6b01ef",
+      "componentId": "BuildingComponent:2ae96f57fbb7cac373f33f1a17bba8cd6c43b52a9b81c228f6ef4f4c8c51872a",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:81e8613ad8b62c796e2cd43926db0ae9a9f593db59a581f3bca5170a72676e17",
+      "componentId": "BuildingComponent:2b1072d6afcacb221d1e27a316ea3e68483daa83645619efa5ed39d4c9b1e8ca",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:627e91e11144d41c87a60669d4e64d8d5e0b6af0fae63a99eba5d335b04858ee",
+      "componentId": "BuildingComponent:2b57e7541c28b875cf094be97af01d51e4e9419ea16cf67862b6cfec1c1df5ad",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:abf50513a7bef817731a505e62950017e98ef74593c6d5d3ff538e9ff354ec08",
+      "componentId": "BuildingComponent:2bb2e4322dc29eb5b7a52a3ac47f2836637ddd3ca50a73eb16a64187da4aff23",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:917683407fc28275edac2ebcbd34248b7506c082ba4c9b271f588d4209a3c643",
+      "semanticKey": "rockwool"
+    },
+    {
+      "associationId": "MaterialAssociation:595831fcb085d532ff9b11d6280e1dd729d1a7e96250b026698fcc0215e3ba08",
+      "componentId": "BuildingComponent:2bb7c18289e7b99f03a1409526e1cd909428e4a575f1c916fe334635053e0b54",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:b1ea44a19bdc177cb12458fbddc617de12ada9883938e8e3eed79fe9e862a90f",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:85b48cc356e41ddf48339789dca096648f09f66f41f8975e07fac5f2ded15109",
+      "componentId": "BuildingComponent:2de3e3c2c3e14b409024860d7bcdd196c7669b1d82a422444a1ef6bab10e0254",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c3cc1ac2b851cf5f8fbe0a75ca8bd982be31f850833a36467813a38baad8dd33",
+      "componentId": "BuildingComponent:2f210da70ac69daefce8423e527b21aba12e53be135310e635128772846b640d",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e34284e21f790222906b33cd84febbfaf46c1cb3430f401e7958a1d355dce929",
+      "componentId": "BuildingComponent:2f2b7bcfb23c6628508d07467cda0f4f5406e0e1c087c3c62c59519fc184561e",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7df7b70a5051b8f9e70176536919abe53057923a7e49072b05d248dea99e1a7c",
+      "componentId": "BuildingComponent:2fab7046ff0cbefb86c1c9af86f94eb3f7adeb8b1b5d569efcffb6a74c681a46",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5387da0bc8d17c5b22721194fe1dc6aa8456c848eba4b2416acae42df3f713bd",
+      "componentId": "BuildingComponent:307bc0a0219464e4b7f0058626dc2d5ec79328f25d11e4e5f72df8a89668f7ad",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:95cb5328bee561973e919ceba5a05f1eeb1df5b62e2bb6f3f6feb38edd98be2e",
+      "componentId": "BuildingComponent:3325c1a01da3817d6d92de9725d257e14b0502ff217626ad6581fe76c6aa7b34",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d29cdaba267795fca6ba1c9afec5fd37513821d9fade239f5f9778fe2aa77dd3",
+      "componentId": "BuildingComponent:336c76467f03edce097f71e914e1cb9c393ff1ddea58003a72fb0874ef9af1d7",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:940fb7488b6f71b11b27633e8ba77cca4d6eacc012553d68b1cf1035a5a00e02",
+      "componentId": "BuildingComponent:341ba2c14fd786960844927490374bf703545cbf8c6f060f2f73d573cc523bc9",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fd27179e2d29b72e39e75ea6f59e9dfa9c9a22323797246946fe7b36c1cf3e1a",
+      "componentId": "BuildingComponent:3552e719faeef057b43d8158e6eea7ddeb1ddefb6f955b9713346d85d8d9af29",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:37aaeba595d4b226b9ceced31a5ebee339f11fc25d504bbe3d88cfcb2e1fc8a0",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:be1738858699f32e0bbe5284ecd265a769f0ec6ab6259e13fbb777ff3d67f490",
+      "componentId": "BuildingComponent:364e4cc791f9dfa50cf3d3d1788f3a07d9dddfab007498781ded810f732bd7af",
+      "ifcClass": "IfcColumn",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:59ad98065596a4287ccd6c77d9accad76da45141ccd4a7175d18a66470a6f9ef",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:4c5aa0e4a51365252349fcd6607f4e027eba9899d10bef957c64f6e3c64c2224",
+      "componentId": "BuildingComponent:3923829cef0de2f056cdbfe0bab5fd0e961f79b93e5ec0a13a1803de7d5f91e1",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:bde1c1693de69bb44f23d4ae14e8b1d44f03b8d532951505a6aaf9877ce675bb",
+      "componentId": "BuildingComponent:398e850dc8f0f5ca7e0a107b71736a38534a00d3364a290c1979f0253f096962",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e89893d72575db3643574562dbad689ee7816e1caed5c96bdb29b3e7a63ac7b8",
+      "componentId": "BuildingComponent:39c6cf680bb71f7baaff2cfd61c1c70133145198c578d9f84f82a6d5e86a9451",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b76a82c0f5ade469f458f9c22d7e2507ac914b3d9211653b4e690d229769d239",
+      "componentId": "BuildingComponent:3b157ded0387d3574088b69fa76812106f5515662dde53083c31ad560cf4ca99",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6c90c459c1b769216eb6d2a8b4bb9fe25cec1f5752b03edd5e1911eb5dbecda8",
+      "componentId": "BuildingComponent:3b157ded0387d3574088b69fa76812106f5515662dde53083c31ad560cf4ca99",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0fd25dcee1be9dbf951d31b638c8c08fa5567b2c97aa4f442e42d2a997c6d3dd",
+      "componentId": "BuildingComponent:3baa59f3c95ce368de129d7e8890c30556032b5c33148cc6057e819bbf64d8c9",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d3f098342d94c63b7a19aaf5e8172a640f6667c7824caef3e9e9964b5ddbde95",
+      "componentId": "BuildingComponent:3c23c7997ca3afc430d0be19e6d6cb0c9e6a8ddad6d82357100be1dbce7ae3a0",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a6346e54b79f986dbb1c48937d592915272ee9318a8b44e2819895f2d0aec690",
+      "componentId": "BuildingComponent:3cd8a9481ed3d66cbf8366fec94337c5b67c8018c72922e899e94cdb8205073b",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0aeb4a189fd6623c39a6a9d94f0ef9eadfc8407f2cd240da6b5ad444b5bfe1bc",
+      "componentId": "BuildingComponent:3cfc5a750523bde17b136e47bc268308216ad4ea6a7083d9a9b5605793700142",
+      "ifcClass": "IfcWindow",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b7e6d8ecfa6d9bc6ed5aefba81861a3e3a4012bfc7a1f990e8582d157d43037b",
+      "componentId": "BuildingComponent:3cfc5a750523bde17b136e47bc268308216ad4ea6a7083d9a9b5605793700142",
+      "ifcClass": "IfcWindow",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:eabc53c27f4548a755c91e116c6e70dd37f1ea6e5c4e35a859d56275e633c015",
+      "componentId": "BuildingComponent:3cfc5a750523bde17b136e47bc268308216ad4ea6a7083d9a9b5605793700142",
+      "ifcClass": "IfcWindow",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:92e21069463be1513e034abade75bc432c39f366e6863253ffeba953300ad872",
+      "componentId": "BuildingComponent:3e7029dd9d26941d86483599ad85ea4dc41acc1f0ab3d7a758cabe3444f1b3dd",
+      "ifcClass": "IfcBeam",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:3395b817955e617b75b89a17e1ded7fc15d0f8cfa5b43c379764092907c974c8",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:c7c02ca70c869b452af0f66478f4b49d8bedec227fcb460789a2629fcdb21e41",
+      "componentId": "BuildingComponent:40448fa0e37fe0b1133511954039b752bef8cb18d66dd2dad85bc95957fc08a2",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7a8fbd1889a541dc890eb7a65d6d572b792a094e2a59f90225d0f33d8b87822a",
+      "componentId": "BuildingComponent:40a6b95a44dc88eb42b267296e7d14f463b22368bdf4271964769cbb2599f215",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a02bc669ae025a0b048b778e52b3edc55320d86eced587a86baf5c3b98790aab",
+      "componentId": "BuildingComponent:40a6b95a44dc88eb42b267296e7d14f463b22368bdf4271964769cbb2599f215",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3e4ed91c49266c5c53a9a3f8d28c1b96825257389180b6eb2439c370a0378c3d",
+      "componentId": "BuildingComponent:41aa91b3594303419a89d3c6f3c130b2263b47ec48a477d522ff50d5fde5b62e",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:dc23caf2063a188540b299dbd830ff9bbe3fcdefb2c3232860f4a606f6b9a35b",
+      "componentId": "BuildingComponent:41aa91b3594303419a89d3c6f3c130b2263b47ec48a477d522ff50d5fde5b62e",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:650496ffb5ef70e375dcffa8674420858f44869a02d8d7a8307b799fe56428fa",
+      "componentId": "BuildingComponent:44797d57b0f0570e88913089c2980fad06c5483b89907fedb739d7f59a2783b4",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:90024c22bc69550bc9b4135e45d62bebe9ed624d2a6e9707a01c4a9dad88181f",
+      "componentId": "BuildingComponent:4481193cfb82b4724c0a2990472a0af01e9a3926e1b536ae2e922bf5bd2e3310",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:23cd713c1cdcb2d359e0506a6cbec625dd13e3a5155597771dc3eb626fe6c6cf",
+      "componentId": "BuildingComponent:44ce31136531eececf1dce0250dd09b8df8a5fa2f1466f32dab8402b03ef2024",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7101b5bf1472947e430036f08e240e1f0d865538d7d0f5a7fc63247322eabda0",
+      "componentId": "BuildingComponent:4560cd55dc9fd8baaf37c4eeaa5864388b0ef62272a1a6f5839581217306cd7e",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:16372968370f97e3ebaf230f2e754f45f0f18d2b4438b59c18599950691b65fe",
+      "componentId": "BuildingComponent:4560cd55dc9fd8baaf37c4eeaa5864388b0ef62272a1a6f5839581217306cd7e",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4f2d085a7d49a8b0f6bc7f697d73772f099f775b713da0b476f7597c133ff312",
+      "componentId": "BuildingComponent:45e1705b5b7111c1b8a46b99189bb50b1dbd5854c182546fb1c77c6f04b24ded",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:2bc6bdbd5d40d25e65a5fca3eb2abfa5b586d4c4dc411ed3b39092c6d59add89",
+      "componentId": "BuildingComponent:46b109ac58a0aceef05ea68d72f9445587772918b0c8387b561135baed2ac541",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:d99052e4d7dbee5bc95258c4da6b73db0c49719799d48b031105faf0d26df050",
+      "semanticKey": "rockwool"
+    },
+    {
+      "associationId": "MaterialAssociation:76eddc8d3e8cf7fcec2cf4a2e9288ec165e958ee1ebc4492a45322752b975cb1",
+      "componentId": "BuildingComponent:46c634984a71fbf510372c3a46416b0692bf7b1bb17856060c05978c78f1c305",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:7c5b9c148ced0651f15c9365a23f48008075017d4c8b19b69d392458a64f7977",
+      "semanticKey": "rockwool"
+    },
+    {
+      "associationId": "MaterialAssociation:d861ef8408bbb6e71af40d3e8890a7ea0548db2a9a81c13a6b9c3cc60d1f4ed4",
+      "componentId": "BuildingComponent:46d5bcdc3839bfda1a7ea3848dc1f176819154ebc0aae7fe8d73326f75f480e4",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:2a4db9059e7a19ec04675499c18f213b07106850210c3534cc6eb2cb2e53577b",
+      "componentId": "BuildingComponent:481dd7c9c67cc6f4305f1beab567414bd662f876f3c8085ed0f98adc08eb71f6",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d6e3a0f667d56ab58f962729054e05c03b9daaf04214adb2d18db09fd974f916",
+      "componentId": "BuildingComponent:481dd7c9c67cc6f4305f1beab567414bd662f876f3c8085ed0f98adc08eb71f6",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0f03ae572b5a0f6387d012edce871447fce61555f4cbc11d5ccefbc19a8dfed5",
+      "componentId": "BuildingComponent:489313c11c55512bca645ac89ec437d9c1b9142bdf8dd28ddd4ae0291d282b38",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:72084e7e37d9454e78c86f373f478faafdfd653e7db4bbba0d25c9580ba1d100",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:cc142f26ae51e394226a9b42399fb832c214372ba5ea6b53d79705a7de86d317",
+      "componentId": "BuildingComponent:4a30d2b5b6c48e33a957ee02b12f3df8becd4929331e8c00b0bbf6729d4cff80",
+      "ifcClass": "IfcBeam",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:b510b55da740daf1ebb2d9925405c2d70006d60e55a13fe55e87cba617bdd0d9",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:294e7d1548d05e38e7ac66e49d3c21c6eaed237a106d61216b88dce9e9bd4b0e",
+      "componentId": "BuildingComponent:4a628e1fe63ca2ca190975a1e17a13284b9bb47bc0ef46546561200978df8a29",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:659811a37c3c1126476079da3be469cd8477831f82a48282ae26801018dcb2b5",
+      "componentId": "BuildingComponent:4a628e1fe63ca2ca190975a1e17a13284b9bb47bc0ef46546561200978df8a29",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4af85e71cd89deba582477c750c71c65d15175f0ca119d16afb5d1255f56c070",
+      "componentId": "BuildingComponent:4c41e0118307cf5039bcaa7c1d91dd9ce703ccbd68e529d7a2fb358ed8f0ef63",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:11dd7fa94736c656204477f7cb8cfdcc3e0a056312a5d94fe4abb5b49f5bbe93",
+      "componentId": "BuildingComponent:4c4512563d4695d17dbab75a545cda8a268aee11be66409d4f9015e475af3146",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:976d05b324d000be236c218f502df085bb1b83165ca5f9a99338fb8d81de9a97",
+      "componentId": "BuildingComponent:4c4512563d4695d17dbab75a545cda8a268aee11be66409d4f9015e475af3146",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c6c7cf91789bb04995a0932433875219ab0a862e3ba12bdb7eca3993cfcd2700",
+      "componentId": "BuildingComponent:4c89f3d0739ad9e95c60e1a91f7fa0d4a55736b4c0802e2b1eb449af7c2ff273",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a0a18edcc2f61b53465cc4022a591adb1dae3408031f6235bb243336709211e1",
+      "componentId": "BuildingComponent:4c8d4f0cdddf373bfdcfbdbd2765a98fbcda6f74edcee14b4105ddfbdecd4c21",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:81ea78197809e36387e6883ef44ad5281318208ccff232c31064df8dba4d3607",
+      "componentId": "BuildingComponent:4c8d4f0cdddf373bfdcfbdbd2765a98fbcda6f74edcee14b4105ddfbdecd4c21",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e82769b9b613f1522a90cfba8fd9ac93177bc074a7a739ddc194cc76cdc849a2",
+      "componentId": "BuildingComponent:4d311690c38da35025065f457bc73a3cd44e3a634adf2ab7ced45cf253b4081f",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8d2781f34f23b540e8264e81ea669600eada73b640d3ff888a2875942d1b534b",
+      "componentId": "BuildingComponent:4df25c40c571b1f3c1e7565b184faebd4dcc503208c7e7651bb955ff26aa725f",
+      "ifcClass": "IfcDoor",
+      "materialName": "Fire-Rated Door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d4c4102affc3ab89f3f33e5063732cf9c9fab678afecb5f223e2fd578f0185a1",
+      "componentId": "BuildingComponent:4df25c40c571b1f3c1e7565b184faebd4dcc503208c7e7651bb955ff26aa725f",
+      "ifcClass": "IfcDoor",
+      "materialName": "Galvanized steel sheet fire door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f4c70277c88809df75b94d7a073a7870c0932af242a6ad931742f301568c0cb0",
+      "componentId": "BuildingComponent:4e40c1612a0c798374331db6f3314f2777380384705327947aab8792f769fcd0",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a6c047b71904372010d2c01180fa3e1f5e9437f9dc1d44fe4a4a7815552bc553",
+      "componentId": "BuildingComponent:4e51b67f0f5daf09359ac69763cd37a91b449f208ea46b00fe9a386841c5b0e9",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9b9f02abf7043fa3a8fbd6bd2a6668d1c7d59d385a378d7321c70593b36e4035",
+      "componentId": "BuildingComponent:4f87b4b0c048cbee3b0decb1a0057658ff718e781a6956df70204bbf6d9d6e14",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:ec476084dffa324090511fae4ac5e926e2de745d81541ceecf6c0492239f7d9d",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:da1586a02409fda965e4da96e6d397cf6f49d0e2ff103b08a7851f8ee7d57dfb",
+      "componentId": "BuildingComponent:50bdef64db8d22a5995178c9d0cfd5a3f35ad7bd9b1328d64e4f239233477d8a",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:569f2ac2900676e88f4fb8a30c6639509b27f6dc57fb1b32946faab5f1aa4f56",
+      "componentId": "BuildingComponent:519567b5f09544c9535a1a871adfd6322fd8329240ce06cd48435cac798e0e20",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b57f2179080991f62d751e4ceb1012010d87075cf26578c79ef18de5322849f4",
+      "componentId": "BuildingComponent:524abdc6ff948612b098cee05b1fff58f878b022a1bf56ef2cfc1e46f03c999a",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f9a21f4c525915b50bb116483640929d1ba78458383bfdad9b9bdf98f811ae9b",
+      "componentId": "BuildingComponent:524b34be12d454840abb0e2586941f6e3be1cc274fa3d6a145aa1b058a93db6a",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:94936a2fbaac084cd1f25cec97fae79e336c09e21dc57ddcecfb2a36bb77797f",
+      "componentId": "BuildingComponent:53106cdc42a7c15a970e7e724a1e6862d1b81d30e4850c6498995943cd93f920",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:58563f2710867d377a566811270e17d138df8d28f263153c44d12d4d415ac4e1",
+      "componentId": "BuildingComponent:53106cdc42a7c15a970e7e724a1e6862d1b81d30e4850c6498995943cd93f920",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ed5d35f7db63941247b5ac77583da22e64b22aacb726e4135becec42f92e0ba8",
+      "componentId": "BuildingComponent:5502cb1ef044611135502886cfd27ba694290ac72126961d0b8b462d0f072bdd",
+      "ifcClass": "IfcWall",
+      "materialName": "Fired perforated brick",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1971df701d6ad794270962b3eb7dc04fa2531efc514e13811e21f7c1a069f90e",
+      "componentId": "BuildingComponent:5502cb1ef044611135502886cfd27ba694290ac72126961d0b8b462d0f072bdd",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0866eb7517f4c2569fd35b4f00eaaf589df4995d791c4c780422cbf28407a0d3",
+      "componentId": "BuildingComponent:5652ef5d46cd368178126f2269b76e4507d98b85e68f4afae9db4439ae449359",
+      "ifcClass": "IfcDoor",
+      "materialName": "Steel",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7685fc68adbd47b46c2b39baf6ba979507faea1a3286d18e58005759fe9db051",
+      "componentId": "BuildingComponent:5652ef5d46cd368178126f2269b76e4507d98b85e68f4afae9db4439ae449359",
+      "ifcClass": "IfcDoor",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1a2adee78d7cc62da78219a52148b732ec0b5ae48df9657cc47a80c87a5c0651",
+      "componentId": "BuildingComponent:56ef4dd0914dabfe90b0e2880bf5b1c63d64c6a1b9003af016e19d2625936ad2",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4c5f1885a660032590cd662f1b81480fce2923cdc2dae9a47268f6411ef84851",
+      "componentId": "BuildingComponent:57156c61bccba10d8d3896def36ca6a683b9539f27ff7769d2f0e6902a32216d",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f7005cd624457295ec1008b762d92a66dff6ee7b85639edd51950bab77d56536",
+      "componentId": "BuildingComponent:57156c61bccba10d8d3896def36ca6a683b9539f27ff7769d2f0e6902a32216d",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3efa0bc007b0a334bc9c3e8b4ea42c9795c288a6370f2867ef0d1a4d39a7e283",
+      "componentId": "BuildingComponent:57183d472e5f4ebc41a3951849c48f993f31d4d0eeb350b6ef2408c65e6182ef",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4056fb03455e4bc17338652e6312419ded4f38dd4b0e47fb23e5601dd295bc1c",
+      "componentId": "BuildingComponent:57183d472e5f4ebc41a3951849c48f993f31d4d0eeb350b6ef2408c65e6182ef",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8b3dbc3524feea13e45c3298e55e09ddc74aee1baf836497c41e7a9abfa1351e",
+      "componentId": "BuildingComponent:599d517ed20f57804693cd409627e8d31819fd155528ce31ce1341e37c994850",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5befe9e8d74217ef9a62f60baa9ff6e1109583986693f7ab17ef74e467265b3d",
+      "componentId": "BuildingComponent:599d517ed20f57804693cd409627e8d31819fd155528ce31ce1341e37c994850",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5ec2038fd55364081a5d0e53dc9dbc03c35611308ffef4ae25d4cf008374f372",
+      "componentId": "BuildingComponent:5a12e698f879314ee1ca440f35ab9423be4ad9e12505eced524434ae0274585f",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d3848ef1579d1ea23d35dc5bc0a18afd4e55648a72f0ba2af7afc86ae542314a",
+      "componentId": "BuildingComponent:5a7b20ed6d6cf91ae4c610d9a231ee8b882561a859e31e7432cf80cffd2fa736",
+      "ifcClass": "IfcSlab",
+      "materialName": "Cement mortar",
+      "reasonCode": "slab_finish_secondary_material_ignored",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:e16399c367417f51d86514b1526407f1b8c06c317da1cc9d092dc95693ed8b27",
+      "componentId": "BuildingComponent:5a8ae897a50da17c91bb1e212e88ab080a269836ebdb3ae38f94c0c9a0317350",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:11d5ac0d17b6901f5ca01628e442eb4608c504214e634bce14c925c35c6eb3c5",
+      "componentId": "BuildingComponent:5bfe19f97d2660294f4d329b00af84b63ecd689eb3bb126a29eda19ca091027e",
+      "ifcClass": "IfcWall",
+      "materialName": "Fired perforated brick",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5e84d3b7d763dee3e91296ba4d1d64e1280c2f8398808b126b9444d5eb017452",
+      "componentId": "BuildingComponent:5bfe19f97d2660294f4d329b00af84b63ecd689eb3bb126a29eda19ca091027e",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fdc930a10bade88cb7732fe1f3c85b4ea977600fe016998fe6fee3907c9734d2",
+      "componentId": "BuildingComponent:5d75f42a230b5a82d36d80d0f2bab21756147553d1451738bdfabb0948c98385",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a1585c89720813c5d359f3aa7d7c268c9d2cf04ecad9ad849db9fba74fbab259",
+      "componentId": "BuildingComponent:5e2469afa0c088eca8ffbebfbc802081cbe06fd40749e9ed4cedce6cd3e0521c",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9a864902bd014bd65768de47917e9abb1408ae6753607dc66fddd08e922c7724",
+      "componentId": "BuildingComponent:5e2469afa0c088eca8ffbebfbc802081cbe06fd40749e9ed4cedce6cd3e0521c",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:33df7b8620f03ade398dfd0241de116a8ce26a4377eadba1fee5fb8eb8be5ae0",
+      "componentId": "BuildingComponent:60bc78658f6772f00ef63656afee1ffa2d223ceeb37e87d1f3d16293896f2651",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:720ffaf5206735ea23ee899da6715a904ae15634806d748a5df97771d8df4df9",
+      "componentId": "BuildingComponent:62047ab08aa596e374bec6e1f1ec952467869b59ab5e835fd9deab627207f758",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:2e0432bbcdd9f0e1c9c75e2ad3fc4d1dd7d766020bc1ba1b7a53208fa0cabd9d",
+      "componentId": "BuildingComponent:63319d37d99e2952c4f7b984d94f2d7e336a614cd920ed571062dc2d33370a01",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:889ea2450c6d110d057499cf6562479a309acc131baf05aba3a9687379bebbd3",
+      "componentId": "BuildingComponent:63e0024fc3d47e6f1b25b0d970450da07c07d93ac29289c050d1fd637374aa81",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:03d152157882b54f71460c099abbdfa7f062873c05693a1e16cf0239016b5c8a",
+      "componentId": "BuildingComponent:676755d2e07b8a2f088bc38d4068f39985e6da3fa1a107b3d89dd928485765d1",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a77ba759bfee5a9255354daf271d4cfcb14444c65cd96d29672e86629e6140bd",
+      "componentId": "BuildingComponent:676755d2e07b8a2f088bc38d4068f39985e6da3fa1a107b3d89dd928485765d1",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:bfebfcf6e7eb01d7f5192ec16870e5211fb8981cffebeb3bbc474d4e6264893e",
+      "componentId": "BuildingComponent:67affd0de94401afde1b0b0a3840091ec2dc4c2ca1e2f3a95683afc888682d07",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:249540047cbd93e367b1b29001570835fa9b9c2113f2693f9aea4be02c13985b",
+      "componentId": "BuildingComponent:689d58c77a1b2c639b4ac99ddd3e86420f136eb22d095f438b06618fad1c13a5",
+      "ifcClass": "IfcDoor",
+      "materialName": "Galvanized steel sheet fire door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fb8b4573b01e4dbb49d49dc0c5edef51be264a924be37e6f009d0664b0f79ab7",
+      "componentId": "BuildingComponent:689d58c77a1b2c639b4ac99ddd3e86420f136eb22d095f438b06618fad1c13a5",
+      "ifcClass": "IfcDoor",
+      "materialName": "Fire-Rated Door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:59cfd24251a5b267532fd225dc23678fef332e0756806c9e7a8f820dc1164f0a",
+      "componentId": "BuildingComponent:68d8afafc3b22df1bafe97d01fe4bbeb77faff54eead32f47de1ff12aacba18b",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:aea445980a3740a0a8ebe605cc749cab50825347e9cce9dcdcdac0a5de354493",
+      "componentId": "BuildingComponent:69cc02eff52ae617919ab2543ac7f01e07464a98788ecda99afae96accbb6124",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4c6408c0de607eb7057e504c9029a4a71942a6913c68c2a069dd33141ea8fe39",
+      "componentId": "BuildingComponent:6a493592d4258b74c6a2d50f894ca7734f3d7248cf99da23ad216ea430413cc3",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:cb53524a83b8caee8aa20fd0057dc593dff51bfb722a5a29cb4012912cd38b56",
+      "componentId": "BuildingComponent:6c4f3e2669acb54b9780d51fd85a614f731cfa1297fd6307f3ab2bc3d106ccb8",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ac438e0cd8470519ed48f0f183d4151d2c0fbd1f2cf17966469b68046d71510b",
+      "componentId": "BuildingComponent:6c561a422a28d362a8947d268d1e659eda16e3a4efc791f3037286c54b88d1db",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:17e5e00fdbd75439477a608e96d05e2917381a042bf6bd4463d59988308cd23d",
+      "componentId": "BuildingComponent:6c7ba9ebd270721adcb769099b9f7d95ef0d7b08818387447f85b788f8dcdf5f",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:fb0ee1a7ab7112d9b2ad464aa2c262b48f20e000356864e0dd172f39978ba747",
+      "semanticKey": "rockwool"
+    },
+    {
+      "associationId": "MaterialAssociation:52b61c714b8d0df5147e7454beec071ecfcf04a6156e5a1367a3cf27d4fa1ba4",
+      "componentId": "BuildingComponent:6e4da9844915297c3d88ced1d32b118712ecbd350e6b0250fe825327c667a3a7",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8feed9bf5011277b3e6c6690c4dd149e484a89f131d757de742bbd90c6fb2964",
+      "componentId": "BuildingComponent:708f6980a8ccac352f25fd4a41d0c3830c6698bce98c3b20ad56fca82be1a42c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f8dddcd305f7b1e60697a878d83d2ade1aa5a2802cae8893fc5b6e8604164ee1",
+      "componentId": "BuildingComponent:70c062174d6410f44c4d99934fa118bade6fc75833922fd948c5ec3e4cd6211b",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a5742dfae52716365c67ba3ec1a17e6116033b8c021c224a7e3d447c2a28a76f",
+      "componentId": "BuildingComponent:732088de08fd797518c32c7ef6ef7b37b854f702dfdca764a70cbeb3f0924ea4",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:44e32e15cc6392611ee3f333244095d0107aecfb73da2087ba815f0763a3a093",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:e1d7e2c6ec96730fc3f75d91e411f33c1c8621b68812518906d2ee1cdb53dd73",
+      "componentId": "BuildingComponent:7332563ac9348c730329a7f23546cdf2ec7550e437bdc3eec17a1183f14161ed",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7afc13f838239c8cc33cfb34149d9a5fc606f55d4765c5ef3dc4cf93297a72d2",
+      "componentId": "BuildingComponent:7816a3bff54be41eac1f209b95493af78fde10ad5e642776579ebfdf6a5a5bad",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:de01e4810db20d6ba0dfe303398717329a7488e413b976facfe18fee0a19879b",
+      "componentId": "BuildingComponent:7876aa8f56dd703904c677604d2f1aa99c383c0a2299298f1cb6fe6fe82d0ccf",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:c8cc00a886fb7616c788e50f520c1c757e99dfa98bccd0985c9e8e4e0f14b81b",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:87e7603ec3c3e4126875ffd4f33a28c9f7f7d7fb6dc0cd9261a8f8b046f54a10",
+      "componentId": "BuildingComponent:7b18cacddfade5bb2d0f598d44665992928e67bcfc19acb1509420d50d7ea5a3",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:6d995a47b8472781da8717f405d4fe9f120bf15f5c88765340ac90023520aa71",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:a167e78fc04c2d38b3f7f0bbc606e31892422e8b2e77c32de8cb073d4106b0a9",
+      "componentId": "BuildingComponent:7b493c11b058585909e7685c406e406f96367c98ebf6231c26081322bbf35145",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:23dc91306b7c44e15ca9dc0a2f9f0347cc887b1bcf80b0b01d1dd815136bb11f",
+      "componentId": "BuildingComponent:7bdeb6d93c6b0ec6cfac95726da4437f960b16ad0b84dd344cabeda9a8648e9f",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a3ed2111c5ee7fa8ec76ae8be6dcd5c44c7f9bea72c1437bb66dc591bdfdbc9d",
+      "componentId": "BuildingComponent:7cdb71e03f73cb640353b5e877b53b187aefdaa193f890ffbe40c57823ff4192",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:9a49cdcbeaf6e9d3bf59ddc3ac99c58f8cd0b9b13bab00417dd3fbb2db648fd2",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:b5f3d2c62c501e407011eafe98950c3ba6b2b36749a1abe959b2d9ffce915f16",
+      "componentId": "BuildingComponent:7d855e4a4e1bc7d4fa254c37669516cfe50b6c76a8df73bb141b52a45ef5e549",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:aa4df70084d9bd15a8a3cac2a4c4bbbe5e43465183aa139de3f8d14fbdb2c7f6",
+      "componentId": "BuildingComponent:7d855e4a4e1bc7d4fa254c37669516cfe50b6c76a8df73bb141b52a45ef5e549",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f6d5307132a3d818698445fac8637d8ca56a98feb0a6a2036ff5ed535356fbc4",
+      "componentId": "BuildingComponent:7d85e919c90cc60ed711ed4db626a899dbc2ba7b617c87ad37a7ab3d76eadb77",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a179accd3c0f29c494e1398425d309a0f961b32f17c357db01d7388db843e5c8",
+      "componentId": "BuildingComponent:7dd33b6b29b6bd505b7f177f2a18567a7647378b7e4ba7ef1bebfbb022d52489",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7a5e97321407149e3b325038fcc5c1b0447806473d2a2a1f72b06c62c3d16d5b",
+      "componentId": "BuildingComponent:80c8e24c2d395f8b26f266bdb51636cc519d35cce44e91729af524ae5afae0e3",
+      "ifcClass": "IfcBeam",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:0cbc72f372eee2f14ea012e0dc4e872ad899fac14425e18c2301b801d57cb960",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:38e9fd3fc89b80d9a13dcca56579fc72d09a341b8e234f001f21d88caa7ae427",
+      "componentId": "BuildingComponent:80ca0d20050f0dc8dc8759c7e04d7a181c8be80de2826d8b9e90169002b5588a",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8c08c9288351824cd7f04abb76e09919dc423901b95c73ad571945f615d1afac",
+      "componentId": "BuildingComponent:80de3c37f5533ee90fd09d8d66527b2c888e464a5899a76ec26a87182a71255d",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ca94209c8dfe2627cb2d1ef3da27ee32310f6f010c27f33136b85fd555c6d9d9",
+      "componentId": "BuildingComponent:8171d669be1a0b4f2d1927951d72c001aab6a6081193bb081d4d88d9fadf8992",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:be4eeb9370e16502dd37ee2abb8bbe1f2f38cf85e86bdb13f41e63eca548bf89",
+      "componentId": "BuildingComponent:81897be426475a790d99fdcd1984b1b2a7ce5dbeb5227899136ef99be9940e12",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ba2b0e7f4625768314b9b18ab4b7033bd2712641bdf984378efd68e9fa9da8f2",
+      "componentId": "BuildingComponent:86aea5142938cb3a86610ac02b206a5c9acb1f345d7bde0eff25d86815a0b5bf",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ebfe4829ab976714a2917f2c14971ad5c755e72cd258ff4f0aea42525d7a2e28",
+      "componentId": "BuildingComponent:89a91d1291827778ecfbdcb923505e95b36505e501f3a4aa9483edb1a72aa24e",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ffcc28a9ec37d49f884a3753ba05c2e39d640ab80fe7ae245eabc492e2cf9c46",
+      "componentId": "BuildingComponent:89a91d1291827778ecfbdcb923505e95b36505e501f3a4aa9483edb1a72aa24e",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8e5e432679291a07694b12432a403b107ee170494d5fbe5d942ff4c1f3861635",
+      "componentId": "BuildingComponent:8a22e24e8138d83f54d99d92764d1ac4a4e425a0bc380b0ea45a3a803a608941",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3c35309c2a69785c5985471000750198491307bc7ec8114fa7a23b8a56733dc5",
+      "componentId": "BuildingComponent:8ad52810ed0576ecdc0dcbe351dd91dbd046e089511a41adc8c398d05bf5d195",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9be53c5d60da3db1d11c1f05a7f364227ac9e3a6d6c50c82674aedc63b4b849b",
+      "componentId": "BuildingComponent:8b6f1099b59b5e2a54261e9315389635b353bc00b58efc28763aacbf46666067",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b3e845a0c69693021aed073d555c8b835a03134eac851b37720ec70be9587c92",
+      "componentId": "BuildingComponent:8bcdd4fca3e4564aae3a0f45d5621ae9483d0f54fab4b638a44818dceed38276",
+      "ifcClass": "IfcColumn",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:b04aac09d82492d06ca6f1feeb809d180cb36939fa16adb83a128c62bfcfad05",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:f6453ce4be37595aa48f0e9a091821f1aadf0bfdd09d9d203e9e7a166c122780",
+      "componentId": "BuildingComponent:8bf41d457bed6a3de8029bd3b5bd7f60455a99b2e0275a0be77c47b59663a665",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8f33fcc1c5f6aff4951468b18ef2b01c214c9c0a0a422d1463395f3b66fe8bb7",
+      "componentId": "BuildingComponent:8bf41d457bed6a3de8029bd3b5bd7f60455a99b2e0275a0be77c47b59663a665",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3724929e212c13e57fd525a78c76449f7561fcbe0975a8b473e16cb1332a6d3a",
+      "componentId": "BuildingComponent:8e092d34e0b52495e23872dd69d6ed6bed06aa0485d9b4ca5074be65fb088d28",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b1db35f1ef9fe4b2c02f644e64a3dae996d9331927aadfa591e6159f24a2e607",
+      "componentId": "BuildingComponent:8f24d262a07798c88aa35951c3aef54722910eb67d05637a203eb260e2a1964a",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b54a6eae76ef991b489d074ac2af92aacc722bf39bb507c81743b0e70901f980",
+      "componentId": "BuildingComponent:8f24d262a07798c88aa35951c3aef54722910eb67d05637a203eb260e2a1964a",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e65b3ad12bb61d60f4f2f50e6e75ae951b3aef14b2753fa3d3445b8c5c67fd88",
+      "componentId": "BuildingComponent:900a9096e9b28fa5bb8a483135d4c681b68de3a661bd0616acdb8af01616e931",
+      "ifcClass": "IfcColumn",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:701bae8d8d3ce1cf5ca2002b677b9364a96d7563474cd15d295a348eb0df2aa3",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:e5b88afdaed2db5f7df8d87e9b97242699c7380ecb8595c54381b22e75169fd9",
+      "componentId": "BuildingComponent:90e2c613f20de083914b6b9fbd61bdfc1531805c352cdc7445da4eb5a498a6fa",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a9e6a0abeeb0208386fcedf4a12cdef0a9dbd5f810d15cc9ca2130452c4af534",
+      "componentId": "BuildingComponent:93b8d0de5699b94e0a92b6e622b75e964cbb7cc696045e7124b98b5973bcd545",
+      "ifcClass": "IfcWall",
+      "materialName": "Crystalline waterproofing coating",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:47ec6bffafd71552f67e434abf0d78610352698befed45d5a39d2a224de4c3b9",
+      "componentId": "BuildingComponent:93b8d0de5699b94e0a92b6e622b75e964cbb7cc696045e7124b98b5973bcd545",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:44ef9eb6072eedeb89dd470e24f36c223b4aa8a69ee1f5010c00580cb3533fc5",
+      "componentId": "BuildingComponent:944c03266f5fa9f74be1b1c947cb9863341ba252db49b1dcbb3a8199ed5303fe",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9d1c71a2b2a08cde7eaa6202509c4dd8e2138c5ffbf0ff1e6667119e84bcf5ba",
+      "componentId": "BuildingComponent:94cffabe4eaab2a0b70a8abbaf9e956812a44389869f3fd936cf2bab92aaf7da",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8b4c9e0f0419cc937ada17d9891f2c91a556af410e845bf9f1a21274c0f3eba6",
+      "componentId": "BuildingComponent:94cffabe4eaab2a0b70a8abbaf9e956812a44389869f3fd936cf2bab92aaf7da",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7efd12e26fee108d7e8d2b64f9d0843ff3f3bcf63bfe20a02362c62c288c945b",
+      "componentId": "BuildingComponent:96b37a352aa70737ffe6648a9c2f1f2a535e0d68ad08c1ca22387c515124f364",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:41f86d5ffb568ee3ae0c4affcadf4c659f4af68e2a92a69337f0a91d2c4cea63",
+      "componentId": "BuildingComponent:96e51bf0b513fffb59a939de0b9f60482afc2194b05df1edf86a1afc9550d127",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c85691b6cf10b02837050fb888ba421d191ba388d7511236e55b10a8a0d0ae49",
+      "componentId": "BuildingComponent:97516db6b7665506de3d5084452eacccdcf134d52efda07a7cdf33a7c44c6a1c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:72c0db9ffbcae481786420c5866e331721546e459b1573cc59fa30a0701eef58",
+      "componentId": "BuildingComponent:98471da3326db9c595cb12f78b132e65df4bb10f0063c7b869e099b2ee6a87c8",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:be6c5eb75b9913a673775230542f09f955574673522df37cd5c8d4a7c0bf3107",
+      "componentId": "BuildingComponent:98471da3326db9c595cb12f78b132e65df4bb10f0063c7b869e099b2ee6a87c8",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b1a0b77455ff8d5fb0d180a3ed7beaa938601954bb548b92ab1ef8fe72bd41cf",
+      "componentId": "BuildingComponent:98c4258f2b21ab774201c9a7b6ab4f8684e53a02c842f5e5e51c02f073feb1a9",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:4e2195c87f97c8c38009ea92c9d2c332e6ca392f06cc58452f539d88db2c59eb",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:56205eb2f55509a9d0fcf98da435b2051c18e453ffee0c1f612c0dbfa5e80533",
+      "componentId": "BuildingComponent:98e134799f4771a99efb3ca167e3444fd994544afd892fb39b63d85e1cdf3129",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4658cefa6bee81f18a81da24f1671acc0f8f2e79ba21d1144eccf00e658c2173",
+      "componentId": "BuildingComponent:98e134799f4771a99efb3ca167e3444fd994544afd892fb39b63d85e1cdf3129",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7dc75c3a95674584393b763837dcff0474d7f52892b7f43c7d93f7f470d34038",
+      "componentId": "BuildingComponent:98e138895922ae768a5b06b3a685bd2a1db2b9af03c02ad93005362425356226",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3ff2b4a5666997559e88b6525605297e7c0da0649080c489e192619fda399b86",
+      "componentId": "BuildingComponent:98e138895922ae768a5b06b3a685bd2a1db2b9af03c02ad93005362425356226",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4536140470d48264d732f9b301d11a9c72a954fcfac46c064e34a1beed63b564",
+      "componentId": "BuildingComponent:9a066a2e166929c63f4405840d54c10d9266ecc59e9f4a643ca7f7d7bae2062c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9ee908b9ee954e072ddb1816bb1c51504aa800854314ae739ea984ed0c2680aa",
+      "componentId": "BuildingComponent:9aab8b26d4411c34cc8c8db1c64c49cd39849b648f1f8a55f245c53165143459",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ef5145504f97c9b100f1537054c3a39bf14bc76a41d45f74eccc0a61943ca2a6",
+      "componentId": "BuildingComponent:9ad1966d7b62fc0227e610cfd445dc9329ca303772fa665ca1cc86aafee03647",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0d3d11b3f0d7740f6e5b4a07e2a9639650416a1263355acf42593251e199fef3",
+      "componentId": "BuildingComponent:9addd29d3724d358fbf6ec8afac05048fad634afa30a59741ec918c9ecd1b6d2",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:750cc76bf0eb6fc5473a231f3c4a8ac4273a221f0e397ba8c6004895b4b24631",
+      "componentId": "BuildingComponent:9addd29d3724d358fbf6ec8afac05048fad634afa30a59741ec918c9ecd1b6d2",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:79945e909059d8ef491631aa2b3227562eab174a9b287511a3bfac29fd36c073",
+      "componentId": "BuildingComponent:9b676d558297589af7cf61a5400b3ed5cd83b9f372abf12525c63d65c8b04796",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:561611b5e05f8daf861b910a1cf7ce68bd87806ede4dcd5f50806bbef1653405",
+      "componentId": "BuildingComponent:9b85489a7cb290c012e6e2af15abe4dfaaae1735f9d9be4c53d830c7b6e5bb11",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a1c8e11d559476a3290166aad9b424ba83751bf10235fc6efa9939aa41348e3e",
+      "componentId": "BuildingComponent:9be774cc3c5d7d22aeeba3424a590241b06d198792a03dc8c75357d03bef2806",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:456a530b40f45a068bedf3d422653342558428f0d529f27e85f743efce587f57",
+      "componentId": "BuildingComponent:9bf4da56e7746fb288b6c2bbbbdd4c540db31682741fc10f58b2406b22b0a27b",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8d533ddc4edf1ddc32f98ab4c9fa20fe73fb017233bc613efdcb0f29b3833fb8",
+      "componentId": "BuildingComponent:9d7436f896d182b81a931b4142ea1947afb452532ad396ed21c764a218228b3c",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0a58c93aefc91ecb91913b4ed3fb6b81892fbe839f2bb770116afb2457e1e472",
+      "componentId": "BuildingComponent:9d7436f896d182b81a931b4142ea1947afb452532ad396ed21c764a218228b3c",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:64701dc5cd8f89ddf991fe900d452602aaf8498fb089bd207f1b40702c67f646",
+      "componentId": "BuildingComponent:9f12fcd08c587366e74013cbe3d423876b1a7a24abef2f1970dfb9e6470f0bf5",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3659f0e5035d740ad88614e95a26913fde3bbdbc458e1f0e25a2ea5c8a9cf643",
+      "componentId": "BuildingComponent:a0ac3d5d85a77b177cb075bd597bb9b792577d41cf06d77d8e7e4cc6f332d6fd",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7c0aa912f4ee008d41e18909dc0feaee6e81a472fbb2b67cc8eaefb76548cb13",
+      "componentId": "BuildingComponent:a0ac3d5d85a77b177cb075bd597bb9b792577d41cf06d77d8e7e4cc6f332d6fd",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fdd14bf99e7dc815ed279e23565ee02f89a4319e81f01bcad30c7c269c4dd7e7",
+      "componentId": "BuildingComponent:a19cde95c8d524f18c28aefe9afc361c4b51345c92aa49d79f7ad446d4406591",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:74c072c6bf1b4502758f0da9c17b47f7dbef8581a9e1b725883c9ee112c6baef",
+      "componentId": "BuildingComponent:a2802e50e6e561cd1d3d921c2ce2472a0003a6f09a46ec6f01b7514326510dc1",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:233c60319318d7e170ef88c83a87eed91c95c6b894027d589c521f9f5a5cbc4f",
+      "componentId": "BuildingComponent:a2878ba117196080453b09007382a75f242365d836099504f5fcb7a020b4fbfb",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9858d5c5d658bfde2b25e7efb3a09589ff3d6a8337c9117f395da81b519695ae",
+      "componentId": "BuildingComponent:a30cbaef9117c059270da6e63a2853e13cbec0b80d7def6b3bf4994068a1e75e",
+      "ifcClass": "IfcBeam",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:13a1f6a2124c7f4a54c43bc63ffb3ed2ff2f711ccf67010d9cbddae2dccf3afb",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:cf7dc14ea4f5fe2ac58a1a7d46f3755816ec2ae5242d489de707ee8e9b7f6c8b",
+      "componentId": "BuildingComponent:a31547330158f2973912086a6d8b5eb2eb8be443276b9e27704bd00097512f4a",
+      "ifcClass": "IfcWindow",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e319c098f53f60ecdbe9290e5ef7e1d19e4003cd099a5b8257136e92b6dce13f",
+      "componentId": "BuildingComponent:a31547330158f2973912086a6d8b5eb2eb8be443276b9e27704bd00097512f4a",
+      "ifcClass": "IfcWindow",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:158f080ebcee0ec1edf979516739f36277c3150ebf170450c04f1332fac9af8b",
+      "componentId": "BuildingComponent:a61f9734caf9a0f67b13a1428a1bc85ee2ca78caa2d15b064bc32eff02f6a3ac",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6b288e9c3833960253c525051b348087e5a31b6fbfa39ef56acbd9282e16600c",
+      "componentId": "BuildingComponent:a61f9734caf9a0f67b13a1428a1bc85ee2ca78caa2d15b064bc32eff02f6a3ac",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0a29d8723072c3223355dadf6d1a5a4d04c83ef89e1cc675399edb2b4cb62e53",
+      "componentId": "BuildingComponent:a66e81b8b1c19db99cc420d142a00726ed00c99e371efae52c8c730d88720011",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:41419fb8dbb02cd31dc888fa355b1893f28eda26cc4b368d1ba967e70108699b",
+      "componentId": "BuildingComponent:a7aa39d26735ba2f384104d49b1314b51769bc2e4319038c8ffbf9d0ecef602e",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d47ca2b40f3beda9c194a05ff6d5f60b6e9cc31fe67572290a3dd9ac837d2d50",
+      "componentId": "BuildingComponent:a7aa39d26735ba2f384104d49b1314b51769bc2e4319038c8ffbf9d0ecef602e",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:16ce1829748461b85e515fd9fca25ba626f2760280a089fb9e3f26e603bc79a9",
+      "componentId": "BuildingComponent:a7b90b872cc3911b5cc267a9a080a5ff7a26afc8245081e5ca4eeb01b548c376",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e9843b2a92fb37f59434bb02e068ea5d8a7029fad84c9d3045565fd0f70a1f64",
+      "componentId": "BuildingComponent:a7df35e8aa1df1b4d89bfb88955d1a5c28e2ed1d770516bbfc92587b81f3b18e",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:90a8bd93e026be5af12de99cf4cf1d3ddcac41798774a0e0c09db54446a2a08a",
+      "componentId": "BuildingComponent:a87db6e2487ee7dbf6bcce9a5b30b9050a102f3617720b31c8047ccf27114d03",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:51ea64b47ea022b3301fc776feca5697ef40ac482613a5561c1d9684ac7640e5",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:73b09f2d4787a0c68abdead6b498f6d57ce7857918fba321c90105043257f8c4",
+      "componentId": "BuildingComponent:a94ba4bc44733f4cdd742e9a7eab8b3ab08485054bfaf8c9702d05705cb5704d",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:731ac0154a91f34bfc0cfdfcb42c5c26e71e0c876156687f0107ee570b86c1ee",
+      "componentId": "BuildingComponent:abe9876b30408f040707f4442c3c46b8ee011c19fbb9ec5bf1ec64f6f1f9576e",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:132b3af36d06edb91aa3dcd2a8b87e21eea3337e2ee2018181e580c06a1d13e8",
+      "componentId": "BuildingComponent:ac73c4007731515af140e4ce525ed3a11ddf5f9c3f65a5f3d8009086f15aaae9",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fbf2e25f65c9b0cf9a4eaf451fc77e8bb9dec8d9edc2696fe0beb3ad722eda47",
+      "componentId": "BuildingComponent:ac73c4007731515af140e4ce525ed3a11ddf5f9c3f65a5f3d8009086f15aaae9",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b7f6774d5802d07b2d0cf487794539607b554ab802e7fc2049978a63a1ce32cf",
+      "componentId": "BuildingComponent:ace46a86eb442ccc415cf675e93485d962e5a52446f46230a0977e23b7e71f1d",
+      "ifcClass": "IfcBeam",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:b332b7a00b1c930e386f539e69785b387bf9ffd942f472dbc13683fb4a811d1b",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:86c626927146e70f9aa66286f787be94bd343e4a76be09f3755cf281089bf189",
+      "componentId": "BuildingComponent:b0a54b393143c978250c7518870d8433e26d4247afd9b697f3d6ff94ac440e02",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fe7b548f63a4a07d74c89e098e0ec545c8b3551f06ed2adf4458b7829d9d4343",
+      "componentId": "BuildingComponent:b153c1f55ae363356322e4089412d573d8bc368a3b924badd5056e9321e794d8",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3c816bde20ccde059e71be93286d16ddb8204456e3db62182b5a08b7d7da6b4c",
+      "componentId": "BuildingComponent:b153c1f55ae363356322e4089412d573d8bc368a3b924badd5056e9321e794d8",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:743f2cc5c2d29925217e9a2bf8945b76c20610cca229f033888ac943278c4c76",
+      "componentId": "BuildingComponent:b1f7eb8c56fb396808ff1e84f060eaafa0cdbef4b11995fba0d6255d35cf2ef0",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:de772d369b81e39284d7c70ae271fde83d6cc6f6755327be14ba797e23b5bc94",
+      "componentId": "BuildingComponent:b3782398d12d17d75e4c776d2181af6dd8e808341e7caac3854ed4f227598204",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:2f49848e58d7ec66d9f87b631d74d037a34379c0c69bfc2b8862fbf796e6d12a",
+      "componentId": "BuildingComponent:b391a97392715a1bcfde483423fc3118e33ec514c7cfe797c79cf8d059f57dba",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8527be5bb35f91b218c72fcd8cbcaecba753dc072cddc00b6294622d932b03b3",
+      "componentId": "BuildingComponent:b3c79f5269f18810fe305f283c344d1683b72271ed011fffe6e3103e97604943",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:51c9eaa0228ff6b013bf3146fb8c32b3d6ef24baa9ea7624c436e43b50e9558c",
+      "componentId": "BuildingComponent:b48a2f010e9838d89168da5a6d9a7d6871f8cb55fb3a659506f92d7e9ee4d820",
+      "ifcClass": "IfcDoor",
+      "materialName": "Fire-Rated Door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:baf66dfc57483cf85c396b6880405c1042dcf40f6b2d848ab1cfb14a81d8f638",
+      "componentId": "BuildingComponent:b48a2f010e9838d89168da5a6d9a7d6871f8cb55fb3a659506f92d7e9ee4d820",
+      "ifcClass": "IfcDoor",
+      "materialName": "Galvanized steel sheet fire door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:cffcb8c05617230035dd87797a34f865bfff462f792d35a79c1eed621033347d",
+      "componentId": "BuildingComponent:b51d0f01f5d58fbe97730359662f5140785deff5ddaf20d0e6eaaaa51e7f654b",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:12c85fcb54c221e89598e660213b5aae5b6a2303574faf77508243d9c3947b47",
+      "componentId": "BuildingComponent:b58796ba8a0aa88199240947f711ec1801f9194d61042be2fcf179440255a54b",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a0b566e7411cf0a99f67478a0eb0a3a59a600c245d88370b0f24a55cc1cecad7",
+      "componentId": "BuildingComponent:b71f2930754b6787629d509c1fc96e69d364e427d833b0c5e2a466d26f2adc5b",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1a95197dcf6dde5aa57480c286b4d6954166d58af6fd879bccf47108e60d64cf",
+      "componentId": "BuildingComponent:b8407475be5117bbbe3e065b3c531da54e4e41f16e52e4ff258ac59fd0f391ba",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:dbd28a3da901f1fe00a0810e5adfd9e246167abcfbb4207010cf91de8d09b9e3",
+      "componentId": "BuildingComponent:b8407475be5117bbbe3e065b3c531da54e4e41f16e52e4ff258ac59fd0f391ba",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:439ffd06e775a59b360189c4dfa696bdfdcf9ebc8ce67a57bd9f37ae5faef6cf",
+      "componentId": "BuildingComponent:b9c240acbd0b21b8fdb777fd56d354aef1996a3cc9ad1b0d5d7874ab8aa5e868",
+      "ifcClass": "IfcDoor",
+      "materialName": "Galvanized steel sheet fire door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:fdbf167a838a258eeb71e64fc0205c85b6daa29be6faff6802b4d2019a29d545",
+      "componentId": "BuildingComponent:b9c240acbd0b21b8fdb777fd56d354aef1996a3cc9ad1b0d5d7874ab8aa5e868",
+      "ifcClass": "IfcDoor",
+      "materialName": "Fire-Rated Door",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e5a9944e862432c5a03b594427fb9d71ad6079f4e7cf8d9d3ea91b844b04a9ca",
+      "componentId": "BuildingComponent:b9f722870cf8ca0229e9a5003e2b88b23992a9f3002158dbf1f37848c21453c0",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:1692edd7eaa437d203b543435b043a0baf1068d255c8294b4d6439cb24a64a09",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:64ba64b59f02af331adaf2ee9f363c6842eb9a1c1e3cf62c0ab6f9f351b7a89a",
+      "componentId": "BuildingComponent:ba0f5e7874a3c073e3d4cd1928eb5140c1edaf6de5c30ec379e630e1ad9b4e7c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c6e739f142997b6d4cd679bc613bd41004e07a09b6553251a056cc2d88dcfd37",
+      "componentId": "BuildingComponent:ba17920571dd1dd3e696058ed53f309d344a086e8dcae2432d1a78898154e255",
+      "ifcClass": "IfcColumn",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d6619a5b68dbad815082dc49db971a3ba1c21afddfb8ff2cde2c9438ec3dbad4",
+      "componentId": "BuildingComponent:bb20fee7c0e5eec98cd649403c023d94be0834245a9dbd3ae914c4b79934cf77",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:710350fbb0f10a8da98dbbe60d59d11353a05acc5bab3d3288743a0d7f28cf83",
+      "componentId": "BuildingComponent:bc35110371b3a74c8e3acd105bb11c3ce494486382a1c2fd8521fa8a40bc9f03",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d12c3dbcb3288ccca776343490798bb2baec2ca09f12a11c426cf18e3881196f",
+      "componentId": "BuildingComponent:bc7556f9fc03aee6373e374633e8621a0ac1adfb82cad469eb72c6fdb1628d07",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d702115660cb1140061720d28e2b45de7a94627319ab38b2638975de375b7ae0",
+      "componentId": "BuildingComponent:bea18f5cc164b94552c15dcc6429546e7af523b1e7e0e3205468580145a1b23d",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3b44268e089d6dd93db01cfe37cb49837c6f5dd9c94d8b3aca7de6e1f12bdc91",
+      "componentId": "BuildingComponent:bea18f5cc164b94552c15dcc6429546e7af523b1e7e0e3205468580145a1b23d",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:644f4a91657242063ff1e6bba6796fb686f9d819eb5c4162ff5dc119b0873a7e",
+      "componentId": "BuildingComponent:beec033cc801777e83940473af8d8e67d52d06fc6290c622a2de17cb9adc2c3a",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5cb6147177a1692bceaadb939095b4ae1b881eef472a6035eb6c2915385e15db",
+      "componentId": "BuildingComponent:bfac08271e97dc7190364fb089b99276ef04707ea42b4788c6a0ebce93a5d4d4",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a3dbf358e95ee9cd504979e7466367597815ba020d9950b547e6f2d40adf488a",
+      "componentId": "BuildingComponent:c005ccf5abef705052942a1c6dcd1ce74f8224bb6fa8212bcc3469e032ac1b2e",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7f63c3a17150bea184095e8e786c6b336cb91f9340c983baa4597721c7cf85e8",
+      "componentId": "BuildingComponent:c36a6a21a342dab699a487b7d14e473db60d5f820791a48da2c19c5aa877da43",
+      "ifcClass": "IfcColumn",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:304bb6bf68d04acbad91a4bbbdebc8b369e280ca57933ff9fb6f4ab96ea0fa64",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:b2c62eab80a3b906f15dd2ad37479c5e5612d8227a6e4224efca2b247582b01c",
+      "componentId": "BuildingComponent:c47b1c93630c3fcad9fd4e6bb6b6f1ddca1ed2a33c7b5860d5922aebfd8271bf",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:cf45ee459a4cde28009fc8d24982438f234dfb24b5fe56df8bc7ed37445360e6",
+      "componentId": "BuildingComponent:c49852e6d845edf64a9ecac3bcd777f94980b93b5999debc7cd82b3b1f0df323",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d7967ae06c27aac7d938ff94972805db8c3da153f9310966344ba1e877b91535",
+      "componentId": "BuildingComponent:c532926b7730141b9fae173f9020ea1e51ad51f4a719eaedd1dc04c0cd155b9e",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "PVC resilient flooring",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:dd818624c467602ac3cb15cf4ed6af4b5f88cdb6818c262dc7d56ae7c13a847d",
+      "componentId": "BuildingComponent:c532926b7730141b9fae173f9020ea1e51ad51f4a719eaedd1dc04c0cd155b9e",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Timber",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c5a1b65759e2e4400cbea83ca1bccba8f44640035dfdcb2b7ec3b7acc22807fa",
+      "componentId": "BuildingComponent:c5f0b5e01e692369048eda161785af274be0518e0704f21d5561dac556eb7376",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a16e6364beb140e50ac22d92fc6fde96d60eadf276b1cde44716f325276cb9a6",
+      "componentId": "BuildingComponent:c6845648c851249fb39751eee5c9ea1bc1b4b6107b2d7283a3ada00922042338",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:4f68cf372d4d878106812f9c2ffa653c3da1eac4ea3b726d1f5d6022e728e4c8",
+      "semanticKey": "rockwool"
+    },
+    {
+      "associationId": "MaterialAssociation:ee429bc8c72f175502c740ce622a27bcea52c861281a8891d7e0581176e10d5d",
+      "componentId": "BuildingComponent:c80af7103f51dae9e77c866fd5441d130c86c03e494f70db8209d118c924ab56",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:250864cbeafe837ee35d277b3d8440972a9a630af78f10d86564a3ac2a24faa3",
+      "componentId": "BuildingComponent:c812d40efc8e5039271cf2e9f9169d0894f904c914695524c36a135a4972fa6d",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5b04b3d0a24774165836cd98b137c5fedcfc2ce9690b9feb461454d34694f5ce",
+      "componentId": "BuildingComponent:c9d5505300fc07cb71e5ce7dd0b5a901bd3589fe33b1b8e41f444764ac22b02e",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:0980f36d495dfb62cf9cf80d969533f39952dd299eb3847ec6df696a8269666e",
+      "componentId": "BuildingComponent:cc5554e6e0e7dda9cc7a24cdac980cd445eded9d664bf0ecb0024c6930a042fd",
+      "ifcClass": "IfcDoor",
+      "materialName": "Threshold Stone",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c909f9b7da91201ff1ae2be4ddd76968640ba58cc31c500dcb8fbd9179d58cfe",
+      "componentId": "BuildingComponent:cc5554e6e0e7dda9cc7a24cdac980cd445eded9d664bf0ecb0024c6930a042fd",
+      "ifcClass": "IfcDoor",
+      "materialName": "Steel",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5e0a889d0372edf03165b5db1fac2c2b39d5c1cfc285746b8c88c97181db5f5f",
+      "componentId": "BuildingComponent:cd7356bb4613d0cef3f6440bff028f34885b40686ac3cb7b2e00074d438dba53",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d5344616efc416e559914f1875f3fd8e4f9efb7149f6879bb130d92e7bc1fb00",
+      "componentId": "BuildingComponent:cf25fbddc7668b770e20b6e80644c7e9bdb1445a2215bf4cc4dafd946aa03298",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:13e5dc998848b2fc1d8c01ff235edeb28c3c0516c6be016ab23551bc84674cba",
+      "componentId": "BuildingComponent:d053bdd9ca3358f2a73cdd9b5047811614d363f50aace7d7da4fb9cce792d989",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7aab55a4ed1414c45dc2cd585399ac965c5ea6b41ff443fa45253e3f3f04629d",
+      "componentId": "BuildingComponent:d053bdd9ca3358f2a73cdd9b5047811614d363f50aace7d7da4fb9cce792d989",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e17af0b7fa47cdb3dbfbc2c07004d07998ae08adc046ce7bee4ab95cc32211ee",
+      "componentId": "BuildingComponent:d0dc762d32a777da35b838f56e6111a2b6093c2c4f1259067f53eaa20281a7c2",
+      "ifcClass": "IfcWall",
+      "materialName": "Concrete hollow block",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3bff5b0fa362414c0e8695bfbf2c85be71f2c09b15d72a13ff9bb84e5df9420f",
+      "componentId": "BuildingComponent:d0dc762d32a777da35b838f56e6111a2b6093c2c4f1259067f53eaa20281a7c2",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:8907a1e79bc95dbde1a69d8746cf0e9241ce219b55814c12f7db90647a3b66c9",
+      "componentId": "BuildingComponent:d1b4769229afaaf917fd7fa3b6ee26a361a43905c800a68df395ba28372fd15e",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:edadee5d0b0d98f2cc7e8c93ffb2f07c821f811390159970cca7f0ff1d38ca1a",
+      "componentId": "BuildingComponent:d219aecce28c98f795a1bbba3f2098db3e0792552b3bf915484452577269097c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:64c16b748c46b75ead36f39ef61120226bda382d05c7e7c4dc3bc4757b1f077a",
+      "componentId": "BuildingComponent:d2af3e4d59bfc39a8d6df9a329e941cd9ac73521a781a4a08af439efe25c1b7d",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:877a2d05167516eb41699e9ccec683c63e98503eec224bb9fd2aaa79761c71ef",
+      "componentId": "BuildingComponent:d2af3e4d59bfc39a8d6df9a329e941cd9ac73521a781a4a08af439efe25c1b7d",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b0765444db7b0769abfc8d761c758b8d2eea00a314d1cf830a2e2913fbfeba15",
+      "componentId": "BuildingComponent:d4a5e9c63e782e88b524a56d8d8ee35c03725ef6e1af84761faa9e9d974ede82",
+      "ifcClass": "IfcColumn",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:4393b1773fe4fc14f478eaa9a50e03279396acd8bb8945228d04bd4916ba5fe5",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:d45c89c6fae935c55799b354c073ec4a8faaab0cd56ce8c21e4f33b6d07ea4bb",
+      "componentId": "BuildingComponent:d4adcf351bb07bb5b81d4907bc67821515a904730e6c4a62895f3cdf3e6beebd",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:9fb4b9cee2784afba523713f1f0de5d76bf763dd1d93f0c3353b793122ab5788",
+      "componentId": "BuildingComponent:d58b323e7b7b84c0a9a7f3f644cedd6152678b610fd92afcee9a2b35b823b5c8",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:994e1342d2770f944a221372cb0acd860aeff878b3389bc161da1155be07002d",
+      "componentId": "BuildingComponent:d7dbedcb60c53aff24e7ad1df91a7277a2cedb3831d8e9a93f31f9125773fe99",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:527c1d4b2495f5e82b2394a5c249004fde3f09b11f5d78659f2585e2256b1ee6",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:cdf31f117668fcbaf05b147798acfe35d480d9e52d58f8980ae0088a1a9b8702",
+      "componentId": "BuildingComponent:d81153c0f8b479f4be865b70304509166e13824830ddb8cdd98d18d4036a44d9",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:dbf01ba211727b3caf79cdad19ee80a84a4c13cf757d253b4db3b9e07a64c45e",
+      "componentId": "BuildingComponent:d81153c0f8b479f4be865b70304509166e13824830ddb8cdd98d18d4036a44d9",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:d5ca568616cb0432d452a0c675da436469fd8beb539ab465ca6f6d5d7237fadc",
+      "componentId": "BuildingComponent:d8e2d29cc87f98b08d684313a3d30f8e4b25421da35b759adc267ccde546a48f",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:463afcf6efb4e3215b7ce1945fff2bc521521752552e621fc62ea2d517b33944",
+      "componentId": "BuildingComponent:db3967ede762da619b14cf7aaf2eaebdead714cf57f6e52616dcd2ad7491a2ce",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:79a0304c35bcea75e1700c9f87aa1d3d94f522378eeeb9c6b9695fadfd1764b1",
+      "componentId": "BuildingComponent:dbdba75d2cc7d7a2eb3065a1c06a26829aac8d8238d6c535208fc0ea1dd43b88",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:834162a8afa5f74b13c5da0111074da4a7e2fcf17f6a93fde7a84ba51dff2264",
+      "semanticKey": "calcium_silicate"
+    },
+    {
+      "associationId": "MaterialAssociation:737b1062fe604d691ba71611760ba8dbe51c3cc7c5d4bad9652c34abeb37670a",
+      "componentId": "BuildingComponent:dc94db8180973b70447f41a0c1f46029e0e4a250c5d2a1c8444e0de7795393a6",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:4b1f79516897b23c560f2ee09f17fbad377bd7ab280f546d866e304431684d20",
+      "componentId": "BuildingComponent:dd2a5bd0793d2b47126d8882a0a24e7d544edcad64b9ec1fd4a4ab4f3318f93d",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3180032beaf38efd6862c5a9e7c023344681de7dcebb06d0763dd80852c3b54d",
+      "componentId": "BuildingComponent:de35c2e7836d58f54407490dfb8ba1f10c4b51d662d9c7c1be45d0c3a09b4f7b",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:98f11ecef43bdd9b4ed2e633753b07d57b657ee951fb29346dfcb994a5086741",
+      "componentId": "BuildingComponent:de5181c42fdbb04cade4a2f08f833117b1760abcc8e81a6b15bebf2f7dbde659",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e606cd027408ed7328ec30691fb1889f6b5bd7b8ba07269e1cf83fa37357d30f",
+      "componentId": "BuildingComponent:de727c07cf5d0dba3e78a27d6889db4c8801fcd9e1648fa409a752a2c8482f70",
+      "ifcClass": "IfcColumn",
+      "materialName": "Galvanized steel",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:290ad5dbddcbdcf3e0a09832599d6325ffe760d6090926fb080167f692cf5767",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:948e797f479b5b88255a63e1f40397c6f86175e9db2cc683031d061000603edf",
+      "componentId": "BuildingComponent:e2d363c992db40d45f2729bdebf993d2af24126312b2f6378c61bd20f76f3b48",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:dfe43509d18d8c777c08b84b961da39e73828304214c0a1239e0f495edc40c8e",
+      "componentId": "BuildingComponent:e34ac73f1b89931f10fbf95963a5d91781ad775e4a0ea0dab1db5e955d3667c5",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ca342416afcc443297c19e9afd1f5188a171d83fccf5ab15d2879e04420d76ba",
+      "componentId": "BuildingComponent:e3ab5ab04c8b06c2130ca65790418d668fb0e29076d309b2718dccc29bcfed01",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:cf7a011c83c46bd0775f14dcb5650edb7568c66e44ee898d518c6655f76124ee",
+      "componentId": "BuildingComponent:e4ce880c4d56f43aae8e0d0c9824d078e584c303d5abc9794cb5e072c41a752e",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:e50660817dea53ca9c6b20a48ff1f45e52065d1c12b8d2b6ad1e1ed11592038e",
+      "componentId": "BuildingComponent:e563987763d0d03f646b331720ef8fa7e806af0add64f8d0743db10c5f654c10",
+      "ifcClass": "IfcWall",
+      "materialName": "Fired perforated brick",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:52f631ca9ebf45ee0d9083d6aeb469034a18fdc488b06d1db14a85acd683198e",
+      "componentId": "BuildingComponent:e563987763d0d03f646b331720ef8fa7e806af0add64f8d0743db10c5f654c10",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f3daa99cc32bb7707bba99e47cb336fa3e62adaf4a6f2a4db95d139a27677ed2",
+      "componentId": "BuildingComponent:e5b46929d2c9a2ccdef015cb1abda2c7bb7fa1e4e73039da9e54ff25c1f21098",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:11a767f685b7795bada871f5f0b7ad333f56cdc566b66fb46373ea075a2a7600",
+      "componentId": "BuildingComponent:e69e8a97ea90033e9f2a1b675cebef43ba1ca040876f17d6c4b377255d2485b3",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f103d43aec987b0c2408e299db03e3d6403f07c26cf46477f2d0e5f116f840f6",
+      "componentId": "BuildingComponent:e75f1d76d9ffbe6de40daede352915e00d68b937437eaa95206d36a1d7dc0695",
+      "ifcClass": "IfcBeam",
+      "materialName": "<Unnamed>",
+      "reasonCode": "duplicate_material_layer",
+      "retainedAssociationId": "MaterialAssociation:9e1a303edc7d0322e242876a1c683e6d59f6f969510bd96a1f8db880be7e9479",
+      "semanticKey": "light_gauge_steel"
+    },
+    {
+      "associationId": "MaterialAssociation:87ea892b09b7a275a63991b8bad604a78b3833dc59cf1decf0e68b5938e66d42",
+      "componentId": "BuildingComponent:e90b87b9e85c6f554ecfe8616d1d4bae682e603234644c5970c21319b78323f4",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:22ab470c739229762e64e81dc558e64ad4bb6b1845d501ec2a3954653837503f",
+      "componentId": "BuildingComponent:eb3ffcc8efb0c5f3dd7411c88b2bd97a9817b4fa192750cd38d70ae159a75ef6",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a830d29fe7c803c16f098f9a8b4b31c4bce40b39b7f186f0a6a1b9dfc6cee791",
+      "componentId": "BuildingComponent:ebb50874e4808202b209f2dc623b3d08f1fc19177a3da0b609c17395ac7c5384",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1f4db40668cf7f4dbcd49b7889937f6426b8a42949bd2b2631f4fa5899f37d90",
+      "componentId": "BuildingComponent:ecaee5ff3e7cebf4c51db8376272315c9563313cb96c14f558a16c969c39971d",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:ec1096961517df227562395a9705e2eb4c54a8514c6c5110c59cda5984f75f44",
+      "componentId": "BuildingComponent:ed633eb3c8ebd7be575cfba7cd7da03e238f8127d9a79dfa105465a0802d6f89",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7271ee93e0c5225769a374bcdaa69d703ccc59354e4c484b9f1869d4931723d4",
+      "componentId": "BuildingComponent:eea1272d37a71ab6a528f04b938a37737c2a04a981f6c7a359c1a8aeb610f146",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:c9824a914a6e89e6fd00f2dd76d35b0cbea7811146d758103e9abe13f9a45e32",
+      "componentId": "BuildingComponent:eea1272d37a71ab6a528f04b938a37737c2a04a981f6c7a359c1a8aeb610f146",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3a5c83a4057a0d51b386be7768cada3fbe40abfe52d16e9d8a124e59c262cc91",
+      "componentId": "BuildingComponent:eefb901a989af5baf962a3dead4aca9a22fe61d3911e150b80d68f64a6c6bbf0",
+      "ifcClass": "IfcSlab",
+      "materialName": "Base Mortar",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:df7403d90ca58e8897cf77a05ac0a4e9703e692ae8f7e0cc6e9091a97f117a99",
+      "componentId": "BuildingComponent:eefb901a989af5baf962a3dead4aca9a22fe61d3911e150b80d68f64a6c6bbf0",
+      "ifcClass": "IfcSlab",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:715946ce1478b212106ed3c17adae0d15c038a6f002345fe8029b29c31bc2f30",
+      "componentId": "BuildingComponent:f01b948aaef72bfe78730c5f334727732c15fc4f9a75fae1df5666f6c202a871",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:cf1bd6ce613e2d7dcbc77b9efe29ab29313df41644d21f9f4bd258a27d0e7c6c",
+      "componentId": "BuildingComponent:f0551575cd8192e6a8652bc9db5733d4683a19dabf4b88b390821f253d35ff98",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:31dad751c937daa58d207cc4a8b3f765300b3b8727c2f3e301b270f6c0caec60",
+      "componentId": "BuildingComponent:f12c5b7ad6cf5984dde6113655d0387e8e4deb9e18d81375499eecdf44530d3f",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:5dd91970078381d5960d2ccb3f4579ff286690b3a20c566fa75171af017b1c8c",
+      "componentId": "BuildingComponent:f190b0a51e73de8dd8b59aa2ae9c89e4fbe91ed5869adb154cc2cd61181925d9",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:adf989c21d7dc5541cf8eda6e8d3383f13a4a6b2930d5f900541c38faf0fc149",
+      "componentId": "BuildingComponent:f311df52763000199cdcd91215d86d27d51cbe0482ca5cb1f7c7975c9c40681d",
+      "ifcClass": "IfcWall",
+      "materialName": "Fire-resistant board",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:3fb0ba0878d07fc5841686a7273d77b2cb64b767e217f2b2f28d3faeed08682e",
+      "componentId": "BuildingComponent:f311df52763000199cdcd91215d86d27d51cbe0482ca5cb1f7c7975c9c40681d",
+      "ifcClass": "IfcWall",
+      "materialName": "Default Wall",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:f90e262758f43e5afdef138b699cfbb14cd9dcbf7129098d5ef3186bef8a25cb",
+      "componentId": "BuildingComponent:f355a90ee16fa07b1d61255043f79bec45953c36982304757b970bf37e70c764",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:eef342f937db2eb034f3bf8cc02a6906260add87f7a5cdb381ffaab7c6ecf7fa",
+      "componentId": "BuildingComponent:f3bc3c8c06831c67d826e02bc91b31bf85c0e1b2aa12b8856200844cd949acab",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Substrate",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:25756acfc36a25c7051ab05a0366eb9f26a97e623e7bc411ab0f8b949d89e658",
+      "componentId": "BuildingComponent:f46ade875ffa5a61ab438f43d5c66ac7dec20a1ff9ed57152f25d99a11ecc386",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "Window Frame",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:42172da3bb06311b66a39778a65f148bb8eff7888f1275d89ea93f4a9eaeaa10",
+      "componentId": "BuildingComponent:f6be4bf5337f3d5aecde1a0f7771336f0db4388363694119ad10701b21dbcf43",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:7048b41a6959130e5200060d2137ce6e9495087de81ac8733fab63ef40f1167f",
+      "componentId": "BuildingComponent:f6c6599cc70aa8389fa5392c3b89bbc8355ef74f628b270058771f08086ba269",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:6a547308fc61cc11012e62d97eb95ef44621bc8eb4c8d58522f270bbed7c0f7e",
+      "componentId": "BuildingComponent:f92881f4a390c8d0c7adfe8d2055c2a96cb246f5c330f121600846f85a5f48c4",
+      "ifcClass": "IfcBeam",
+      "materialName": "Second-Floor Louvers",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:13e8f67d061396738e9b9942f70b2043ab4c9e8816975356e736cff1e346f39f",
+      "componentId": "BuildingComponent:f92a6f70b1827c4628ced442a9ebb5061616522456032d367fc8c0c13a27758c",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:1377f1fd9ebaa9e8339752df6344b0a8b4c09e3ac34b454278eee0c910dbde80",
+      "componentId": "BuildingComponent:fda0c5fc5a8c214656534a64d5c9c7dd3e52d1d61e6a88d92d69b778eb7f890e",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:b746c2b4ad07555f914dfc7cf3c1e7efe0a6ccc7812c7885aa4f6a1abf3b42e3",
+      "componentId": "BuildingComponent:fdbb436540840c56cbaf8563dbfc770a802dda1da47c0b8e978d728965df677d",
+      "ifcClass": "IfcBuildingElementProxy",
+      "materialName": "<Unnamed>",
+      "reasonCode": "factor_not_mapped"
+    },
+    {
+      "associationId": "MaterialAssociation:a483fe9ccd6914e4494033ae362d31199af3d92ae1f746f119f57d7021d55cc9",
+      "componentId": "BuildingComponent:fe6f56b3187885cc48265246c6b1b3a64cf2f8783a0838cf3e2b16fd2e65a642",
+      "ifcClass": "IfcBeam",
+      "materialName": "Metal - Aluminum - White",
+      "reasonCode": "factor_not_mapped"
+    }
+  ],
+  "suspiciousRecords": []
+}
