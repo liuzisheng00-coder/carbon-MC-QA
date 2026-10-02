@@ -9,7 +9,14 @@ This guide covers the retained final experiment workflow. The reference versions
 - Multi-module registry: `scripts/multi_module/mm_common.py`. The main B/D cases use the aligned mass-proxy configurations; as-recorded and equal-route configurations are retained for the final sensitivity comparisons.
 - Held-out compiler evaluation: the reviewed E4c packages and E4e compiler runs referenced by `scripts/multi_module/mm_e3_heldout_summary.py`.
 
-These frozen data and result directories are external to the code release. Prepare the exact inputs before executing the commands. Do not substitute another benchmark while claiming reproduction of these versions.
+Restore the frozen inputs and observations from the two assets under [release `data-2026-10-02`](https://github.com/liuzisheng00-coder/carbon-MC-QA/releases/tag/data-2026-10-02) before executing the commands:
+
+```powershell
+python scripts/restore_final_data.py --download
+python scripts/restore_final_data.py --verify-only
+```
+
+The utility uses Python 3.10+ and the standard library. The 245 files are restored to their original relative paths and checked against the [SHA-256 manifest](data/final-data-manifest.json); existing files with different contents are not overwritten. These data directories are populated by restoration, rather than by cloning the code alone. See [package contents and sizes](data/README.md). Do not substitute another benchmark while claiming reproduction of these versions.
 
 ## Full system and baselines
 
@@ -50,8 +57,12 @@ Run the retained scripts in `scripts/multi_module/` against the releases registe
 7. `mm_e6_sensitivity.py` and `mm_e6b_allocation_basis.py`: factor and attribution sensitivity.
 8. `mm_report.py`: consolidate the generated observations.
 
-Some scripts aggregate existing observations rather than generate them. In particular, the held-out and cost summaries require the frozen compiler runs referenced in their source. Use `dm2c_carbonql_compiler_ablation.py --help` for the held-out compiler runner, providing the correct reviewed benchmark and release explicitly.
+Some scripts aggregate existing observations rather than generate them. In particular, the held-out and cost summaries require the frozen compiler runs referenced in their source. The package also retains the final V16 multi-model comparison and all 18 full150 runs underlying its three-repeat results. Use `dm2c_carbonql_compiler_ablation.py --help` for the held-out compiler runner, providing the correct reviewed benchmark and release explicitly.
 
 ## Interpretation
 
 Keep full-system, baseline and ablation inputs aligned. Report incomplete/failed calls and data assumptions. The factory proxy is an explicitly modeled sensitivity assumption, not an independently measured factory dataset for B/D. No numerical experiment results were regenerated during repository cleanup.
+
+The human-task package contains 39 scored annotation rows from a 40-question sample. A completed manual Cypher scoring result is not present. Type A/B/D counts in `multi_module_20260928/E2/module_counts.json` remain null as originally recorded, so the building-scale report does not establish a measured building total. The allocation report reused by E6 documents a prior four-module synthetic sensitivity comparison; it is not an additional measurement of the final A/B/D modules.
+
+Only final inputs, saved observations and required comparator conditions are retained. Superseded benchmark versions, pilots, partial runs, console logs, resume checkpoints, manuscript files and model preprocessing copies are excluded.

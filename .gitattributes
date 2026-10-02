@@ -1,1 +1,7 @@
 * text=auto eol=lf
+
+# Frozen data are hashed byte-for-byte. Never normalize their line endings.
+/inputs/** -text
+/mic-carbon-ontology.ttl -text
+/mic-carbon-shapes.ttl -text
+/data/** -text

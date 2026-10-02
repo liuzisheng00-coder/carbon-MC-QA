@@ -26,4 +26,10 @@ No new frontend failures appeared after removing the two unused frontend directo
 
 Business logic was preserved. One test now imports `write_task10_release` directly from its defining fixture module instead of re-exporting it through a removed historical test helper. This avoids retaining obsolete experiment modules solely for that helper. The existing `ifc-kg/dm2c_pipeline/translate_typea1_ifc_names.py` helper was added unchanged from the research workspace because `align_ifc_to_typea.py` imports it; the initial upload had omitted it. The alignment module now imports successfully.
 
-The full paper experiments were not rerun and no paid LLM calls were made. Original IFCs, workbooks and frozen output/benchmark packages remain external. The final experiment guide specifies the V16 and Type A/B/D inputs explicitly because some reusable runners retain older compatibility defaults.
+The full paper experiments were not rerun and no paid LLM calls were made. Final IFCs, workbooks and frozen output/benchmark packages are distributed as two GitHub Release assets with a checked manifest and restore script; see [the data guide](../data/README.md). The final experiment guide specifies the V16 and Type A/B/D inputs explicitly because some reusable runners retain older compatibility defaults.
+
+## Final data package checks
+
+The two archives contain 245 files (1,132,372,289 uncompressed bytes). All archive members were restored to an empty directory and verified against their manifest SHA-256 digests and byte sizes. A second restore wrote zero files, and `--verify-only` verified all 245 restored files. All 42 input bindings in seven final case configurations match the source data. Fourteen tracked input files had only their original CRLF bytes restored; Git attributes now prevent line-ending normalization of hashed inputs.
+
+All 217 frozen experiment files were scanned for credentials, tokens, private keys and credential-bearing URLs, with no findings or unreadable files. This check also covered the separate IFC, factor and factory inputs. Dataset completeness is bounded by the recorded observations described in [the data guide](../data/README.md); the package does not supply missing manual-evaluation scores or building module counts.
