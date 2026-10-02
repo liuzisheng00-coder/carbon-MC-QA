@@ -1,91 +1,71 @@
 # carbon-MC-QA
 
-Research code for multi-stakeholder carbon question answering in modular construction (MC), implemented by the DM2C framework. It connects IFC/BIM data, deterministic carbon accounting, a knowledge graph and evidence-constrained queries.
+Final research implementation of the DM2C framework for multi-stakeholder carbon question answering in modular construction.
 
-本仓库保存论文相关的碳核算、知识图谱、CarbonQL 问答、实验与前端代码。当前发布的是代码与部分示例数据；完整论文实验还需要对应的 IFC、因子工作簿、工厂数据和冻结实验数据，详见[数据准备说明](docs/DATA_PREPARATION.md)。
+本仓库仅保留最终应用、论文最终实验入口、必要配置及核心测试。最终实验基于 V16 问答基准、Type A/B/D 多模块验证和 2026-09-30 诊断分析；旧实验修补脚本、备用前端和文稿制作工具已从当前目录移除。
 
-## Repository map
+## Code map
 
-| Path | Purpose |
+| Location | Purpose |
 | --- | --- |
-| `dm2c_m23_*.py`, `dm2c_multigranular_carbon_kg.py` | Canonical graph construction, unit validation and carbon accounting |
-| `dm2c_carbonql*.py`, `dm2c_qa_*.py`, `dm2c_m3_*.py` | Query compilation, execution, validation and grounded answers |
-| `dm2c_api_server.py` | FastAPI backend |
-| `dm2c_frontend_fragments_full/` | Main application: upload, BIM viewer, QA and account views |
-| `dm2c_frontend_fragments/` | Optional minimal BIM viewer for diagnostics |
-| `dm2c_frontend/` | Earlier frontend retained for comparison |
-| `scripts/multi_module/`, `scripts/diagnostics/` | Multi-module experiments and diagnostic analyses |
-| `tests/` | Unit and historical integration tests |
-| `inputs/`, `mic-carbon-*.ttl` | Case configurations, material evidence, ontology and SHACL shapes |
-| `tools/`, `figures/` | Graph exports, analysis and figure utilities |
-| `legacy/` | Optional legacy graph mode |
+| `dm2c_api_server.py` | FastAPI application |
+| `dm2c_frontend_fragments_full/` | The single retained application frontend |
+| `dm2c_m23_*.py`, `dm2c_multigranular_carbon_kg.py` | Canonical graph construction and carbon accounting |
+| `dm2c_carbonql*.py`, `dm2c_m3_*.py` | Query compilation, execution and graph evidence |
+| `dm2c_full_qa_experiment_runner.py`, `dm2c_real_baseline_runner.py` | Final QA and baseline evaluation |
+| `scripts/multi_module/` | Type A/B/D validation and sensitivity analysis |
+| `scripts/diagnostics/` | V16 control-policy/compiler ablations and diagnostics |
+| `inputs/`, `mic-carbon-*.ttl` | Required case bindings, evidence, question specifications and ontology |
+| `ifc-kg/dm2c_pipeline/translate_typea1_ifc_names.py` | Required IFC naming helper for the final A/B/D preparation |
+| `tests/` | Core tests with generated fixtures |
 
-Some historical filenames contain `rag`; the main DM2C QA workflow uses graph evidence and CarbonQL. Document retrieval code is retained for historical/baseline experiments.
+Some retained modules have historical `v2` or `rag` names because the current application imports their shared clients and utilities. They are active dependencies, not alternate releases. Earlier compiler variants remain available only where needed for the final paper's ablation comparisons.
 
-## Installation
+## Install
 
-The initial source release was checked with Python 3.12 on Windows. Python dependency versions record that environment; a fresh environment install is separate from source verification. Use Node.js 22 or newer and npm 10.5.1 or newer for the frontend (build verified with Node.js 24.19.0). Existing `package-lock.json` files are included.
+Use Python 3.12, Node.js 22 or newer and npm 10.5.1 or newer. Python requirements record the development environment; frontend dependencies are locked by `package-lock.json`.
 
 ```powershell
 git clone https://github.com/liuzisheng00-coder/carbon-MC-QA.git
 cd carbon-MC-QA
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
 python -m pip install -r requirements-dev.txt
 ```
 
-Optional plotting/manuscript-export utilities also need `requirements-research.txt` and may refer to historical result paths.
+## Run the application
 
-## Offline checks
-
-This subset uses in-memory or temporary data and does not call an LLM or need the original IFC files:
-
-```powershell
-python -m pytest -q tests/test_dm2c_m23_units.py tests/test_dm2c_m23_calculation.py tests/test_dm2c_carbonql.py tests/test_dm2c_carbonql_executor.py tests/test_dm2c_e6_result_audit.py tests/test_dm2c_qa_result_aggregator.py
-```
-
-Other tests cover historical releases, workbooks and frozen outputs. Running the entire test directory requires those additional data packages.
-
-## Start the application
-
-From the repository root, start the API:
+From the repository root:
 
 ```powershell
 python -m uvicorn dm2c_api_server:app --host 127.0.0.1 --port 8000
 ```
 
-In a second terminal:
+In another terminal:
 
 ```powershell
 cd dm2c_frontend_fragments_full
 npm ci
-npm test
 npm run dev
 ```
 
-Open <http://127.0.0.1:5173>. Upload files and create a project in the main interface. Project-specific calculations and QA require valid data and configuration. API health: <http://127.0.0.1:8000/health>.
+Open <http://127.0.0.1:5173>. Upload inputs and create a project in this application. Project-specific calculations and answers require valid IFC, factor and graph data; included demo JSON is not a complete paper dataset. Do not use `--reload` while using active projects, since project state is held in memory.
 
-The current frontend test suite has three pre-existing source-assertion failures; the production build succeeds. See [initial verification results](docs/INITIAL_VERIFICATION.md) before interpreting `npm test` results.
+The application reads process environment variables. `.env.example` is a reference template; it is not loaded automatically. Set your provider key in the API terminal, and set `DM2C_CARBONQL_RELEASE` when using a prepared canonical release. LLM calls require credentials and may incur provider charges.
 
-Do not use `--reload` while keeping an active project: project state is in memory. Start the two frontends using port 5173 separately; the diagnostic viewer uses 5174. Frontend WASM is generated from npm dependencies by the preparation script and is excluded from Git.
-
-## LLM and graph configuration
-
-`.env.example` lists supported settings without credentials. The application reads process environment variables and does **not** automatically load `.env` files. Set these in the API terminal before starting it, with your own key:
+## Test and reproduce
 
 ```powershell
-$env:DM2C_LLM_PROVIDER = "deepseek"
-$env:DEEPSEEK_API_KEY = "<your-own-key>"
-$env:DEEPSEEK_MODEL = "deepseek-chat"
-# Optional: point to an existing compatible canonical graph release.
-$env:DM2C_CARBONQL_RELEASE = "C:\path\to\canonical-release"
+python -m pytest -q tests
 ```
 
-OpenAI-compatible and Gemini configuration paths are also implemented. LLM experiments require provider credentials and can incur API charges. Offline checks above require no credentials.
+Frontend checks, from `dm2c_frontend_fragments_full`:
 
-## Paper experiments and data
+```powershell
+npm test
+npm run build
+```
 
-See [README_EXPERIMENTS.md](README_EXPERIMENTS.md) for the research workflow and [data preparation](docs/DATA_PREPARATION.md) for release construction. The experiment guide is a historical development record: its result/status statements refer to the original workspace and do not establish full reproducibility from this public checkout.
+See [verification results](docs/VERIFICATION.md), including the pre-existing API-status and frontend source-assertion failures. See [final experiment commands](README_EXPERIMENTS.md) and [data preparation](docs/DATA_PREPARATION.md) before running paper experiments.
 
-Included: code, small case configuration/evidence files, and frontend demo JSON. Excluded: full raw IFC files, Excel workbooks, manuscript drafts, downloaded literature, generated experiment outputs and credentials. No open-source license is selected in this initial upload; the repository owner can add one later.
+Original IFCs, workbooks, frozen benchmark/output packages, manuscript drafts, downloaded literature, credentials and caches are not included. No open-source license has been selected.

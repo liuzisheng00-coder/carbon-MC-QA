@@ -44,11 +44,11 @@ already-created workspace, not a required normal-use step.
   missing IFC/project is shown as a concrete Fragment error instead of silently
   switching renderers.
 
-## Retained diagnostics and backups
+## Repository scope
 
-`./dm2c_frontend` is retained unchanged as the old frontend backup.
-`./dm2c_frontend_fragments` is retained as the optional 5174 minimal
-Fragments diagnostic viewer. Neither is part of the everyday launch workflow.
+`dm2c_frontend_fragments_full` is the single application frontend retained in
+this final research release. Earlier backup and diagnostic frontends have been
+removed from the current repository tree.
 
 ## QA and carbon-account capabilities
 

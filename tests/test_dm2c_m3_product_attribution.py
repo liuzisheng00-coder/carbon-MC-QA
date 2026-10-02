@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 from dm2c_m3_context import load_m3_execution_context
-from tests.task11_v2_fixture import write_task10_release
+from tests.task10_v2_fixture import write_task10_release
 
 
 def test_m3_context_is_immutable_and_contains_no_raw_graph_cache(tmp_path: Path) -> None:
