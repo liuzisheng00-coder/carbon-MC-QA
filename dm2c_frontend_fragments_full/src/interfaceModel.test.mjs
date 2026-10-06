@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { runInNewContext } from "node:vm";
 
 import * as interfaceModel from "./interfaceModel.mjs";
 
@@ -1392,7 +1393,15 @@ test("DM2CApp and the composer expose a real compare-selection workflow", () => 
 test("the approved interface uses an immersive canvas and floating QA panel", () => {
   const source = readFileSync(new URL("./DM2CVisualInterface.jsx", import.meta.url), "utf8");
 
-  assert.match(source, /className="dm2c-immersive-canvas"/);
+  const canvasExpression = source.match(/<main\s+className=\{(`[^`]+`)\}/)[1];
+  const canvasClasses = (showQaPanel) =>
+    runInNewContext(canvasExpression, { showQaPanel }).split(/\s+/);
+
+  assert.deepEqual(canvasClasses(true), ["dm2c-immersive-canvas"]);
+  assert.deepEqual(canvasClasses(false), [
+    "dm2c-immersive-canvas",
+    "dm2c-immersive-canvas--no-qa",
+  ]);
   assert.match(source, /className="dm2c-floating-qa"/);
   assert.match(source, /showQaPanel/);
   assert.match(source, /activeWorkspaceMode === "model"/);

@@ -3,6 +3,7 @@ import test from "node:test";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { runInNewContext } from "node:vm";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -46,7 +47,18 @@ test("full variant connects only the Model workspace to the Fragment renderer", 
   assert.match(source, /<UploadScreen[\s\S]*onStartProject=\{onStartProject\}/);
   assert.match(source, /function PerspectivePanel\(/);
   assert.match(source, /product:[\s\S]*material:[\s\S]*process:/);
-  assert.match(source, /onSubmit=\{\(\) => onSend\(\)\}/);
+  const composer = source.match(/<SelectionComposer\b[\s\S]*?\/>/)[0];
+  const submitExpression = composer.match(/\bonSubmit=\{([^\n]+)\}/)[1];
+  const calls = [];
+  const submit = runInNewContext(submitExpression, {
+    selectionTags: [
+      { id: "beam-id", label: "Steel beam" },
+      { id: "slab-id", label: "Concrete slab" },
+    ],
+    onSend: (...args) => calls.push(args),
+  });
+  submit();
+  assert.deepEqual(calls, [[undefined, ["Steel beam", "Concrete slab"]]]);
   assert.match(source, /<WorkspaceModeSwitch/);
   assert.match(source, /<GraphAssociationPanel/);
   assert.match(source, /aria-label="MC²QA grounded question answering"/);

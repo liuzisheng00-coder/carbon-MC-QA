@@ -336,7 +336,7 @@ function UploadScreen({ apiBase, files, busy, error, onAddFiles, onRemoveFile, o
           ))}
         </div>
         <small style={{ display: "block", marginTop: 10, color: "#6f6b62", lineHeight: 1.45 }}>
-          Upload the final IFC model and the knowledge graph JSON. Manufacturing logs, factor workbooks, and audit release files are not required for this demo build.
+          Upload the final IFC model and the knowledge graph JSON. IFC is the design backbone/geometry source and does not by itself create the carbon KG. Manufacturing logs, factor workbooks, and audit release files are not required for this demo build.
         </small>
         {error && <div className="dm2c-upload-error">{error}</div>}
         <button
