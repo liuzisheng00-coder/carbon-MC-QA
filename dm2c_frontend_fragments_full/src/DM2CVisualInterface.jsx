@@ -320,7 +320,7 @@ function UploadScreen({ apiBase, files, busy, error, onAddFiles, onRemoveFile, o
         <div className="dm2c-upload-brand">
           <span className="dm2c-mark">D2C</span>
           <div>
-            <strong>DM2C Carbon</strong>
+            <strong>MC²QA</strong>
             <small>Evidence-grounded carbon accounting and QA</small>
           </div>
         </div>
@@ -505,7 +505,7 @@ export default function DM2CVisualInterface({
         <header className="dm2c-floating-header">
           <span className="dm2c-brand-lockup">
             <span className="dm2c-mark">D2C</span>
-            <span className="dm2c-brand-name">DM2C Carbon</span>
+            <span className="dm2c-brand-name">MC²QA</span>
           </span>
           {!canonicalGraphAvailable && (
             <span className="dm2c-graph-state" role="status" title="The IFC or legacy JSON is only a design/RAG backbone; no validated carbon graph is loaded.">
@@ -526,9 +526,9 @@ export default function DM2CVisualInterface({
         />
 
         {showQaPanel && (
-          <aside className="dm2c-floating-qa" aria-label="DM2C grounded question answering">
+          <aside className="dm2c-floating-qa" aria-label="MC²QA grounded question answering">
             <div className="dm2c-qa-header">
-              <span className="dm2c-qa-title">Ask DM2C</span>
+              <span className="dm2c-qa-title">Ask MC²QA</span>
               <span className="dm2c-grounded-state">{canonicalQueryAvailable ? "Grounded" : "Query offline"}</span>
             </div>
 

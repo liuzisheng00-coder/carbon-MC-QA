@@ -1,6 +1,6 @@
-# carbon-MC-QA
+# MC²QA
 
-Final research implementation of the DM2C framework for multi-stakeholder carbon question answering in modular construction.
+Final research implementation of the MC²QA framework for multi-stakeholder carbon question answering in modular construction.
 
 本仓库仅保留最终应用、论文最终实验入口、必要配置及核心测试。最终实验基于 V16 问答基准、Type A/B/D 多模块验证和 2026-09-30 诊断分析。完整最终 IFC、因子工作簿和冻结实验记录通过本仓库 Release 附件提供，下载并还原后才出现在原始相对路径。旧实验修补脚本、备用前端和文稿制作工具已从当前目录移除。
 

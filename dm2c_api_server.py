@@ -1,5 +1,5 @@
 """
-DM2C Carbon QA — API Server (v2, project-based)
+MC²QA — API Server (v2, project-based)
 
 Matches DM2CApp_connected.jsx endpoints:
   POST /api/projects              → upload files + init → returns project payload
@@ -97,7 +97,7 @@ from dm2c_m23_canonical import APPLICATION_CLASSES, SCHEMA_VERSION
 # ---------------------------------------------------------------------------
 # App
 # ---------------------------------------------------------------------------
-app = FastAPI(title="DM2C Carbon API", version="0.5.0")
+app = FastAPI(title="MC²QA API", version="0.5.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -2009,7 +2009,7 @@ if __name__ == "__main__":
 
     startup_config = default_project_config()
 
-    print("DM2C Carbon API v0.3.0")
+    print("MC²QA API v0.3.0")
     print()
     print("Endpoints (matches DM2CApp_connected.jsx):")
     print("  POST   /api/projects              Upload + init + assess")

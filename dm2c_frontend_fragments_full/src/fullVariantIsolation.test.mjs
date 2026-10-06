@@ -49,7 +49,7 @@ test("full variant connects only the Model workspace to the Fragment renderer", 
   assert.match(source, /onSubmit=\{\(\) => onSend\(\)\}/);
   assert.match(source, /<WorkspaceModeSwitch/);
   assert.match(source, /<GraphAssociationPanel/);
-  assert.match(source, /aria-label="DM2C grounded question answering"/);
+  assert.match(source, /aria-label="MC²QA grounded question answering"/);
 });
 
 test("full Fragment variant documents one-address normal use", async () => {
