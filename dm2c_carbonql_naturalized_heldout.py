@@ -30,7 +30,7 @@ from dm2c_carbonql import (
     CarbonQLProgram,
     GraphSchema,
     ProgramHole,
-    derive_projection_perspective,
+    derive_record_projection_perspective,
     derive_view_signature,
     validate_program,
 )
@@ -472,7 +472,7 @@ def _make_case(
         "partial" if actual_program.holes else "valid"
     )
     reference = ReferenceSpec(
-        projection_perspective=derive_projection_perspective(actual_program)
+        projection_perspective=derive_record_projection_perspective(actual_program)
         if not actual_program.holes
         else "product",
         selector_component_ids=selected_ids,

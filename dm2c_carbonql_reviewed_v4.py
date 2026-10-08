@@ -14,7 +14,7 @@ from typing import Any, Mapping, Sequence
 from dm2c_canonical_v2_reader import CanonicalV2Context, load_canonical_v2_context
 from dm2c_carbonql import (
     CarbonQLProgram,
-    derive_projection_perspective,
+    derive_record_projection_perspective,
     derive_view_signature,
 )
 from dm2c_carbonql_benchmark import CarbonQLCase, ReferenceSpec, reference_evaluate
@@ -270,7 +270,7 @@ def _reference_for_program(
     program: CarbonQLProgram, selected_component_ids: tuple[str, ...]
 ) -> ReferenceSpec:
     return ReferenceSpec(
-        projection_perspective=derive_projection_perspective(program),
+        projection_perspective=derive_record_projection_perspective(program),
         selector_component_ids=selected_component_ids,
         sources=_sources_from_program(program),
         group_keys=_groups_from_program(program),

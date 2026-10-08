@@ -17,7 +17,11 @@ from dm2c_canonical_v2_reader import (
     dimension_ids,
     lookup_dimension,
 )
-from dm2c_carbonql import CarbonQLProgram, derive_projection_perspective
+from dm2c_carbonql import (
+    CarbonQLProgram,
+    derive_projection_perspective,
+    derive_record_projection_perspective,
+)
 from dm2c_carbonql_executor import CarbonQLExecutor
 from dm2c_m3_context import (
     CanonicalQueryResult,
@@ -420,6 +424,7 @@ def execute_canonical_query(
         raise TypeError("context must be M3ExecutionContext")
     policy = policy or QueryPolicy()
     perspective = derive_projection_perspective(program)
+    record_perspective = derive_record_projection_perspective(program)
     selector_scope = _resolved_selector_scope(
         context, program, selected_component_ids
     )
@@ -461,7 +466,7 @@ def execute_canonical_query(
             relevant = ()
         else:
             relevant = context.validation_coverage.relevant_rejections(
-                perspective=perspective,
+                perspective=record_perspective,
                 component_ids=tuple(
                     dict.fromkeys((*components, *(class_components or ())))
                 ),
@@ -512,7 +517,7 @@ def execute_canonical_query(
     result_metadata: dict[str, Any] = {}
     if (
         program.steps[0].op == "SelectProject"
-        and perspective == "product"
+        and record_perspective == "product"
         and any(
             step.op == "CarbonAtoms" and step.args.get("known_total") is True
             for step in program.steps

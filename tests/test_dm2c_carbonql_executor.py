@@ -272,6 +272,7 @@ def test_incompatible_source_and_dimension_is_deterministically_empty(
     assert result.summary == {
         "total_kgCO2e": 0.0,
         "projection_perspective": perspective,
+        "record_projection_perspective": perspective,
         "row_count": 0,
     }
     assert result.rows == ()
@@ -279,7 +280,7 @@ def test_incompatible_source_and_dimension_is_deterministically_empty(
     assert result.projection_keys == ()
 
 
-def test_product_filter_forces_product_perspective_before_material_grouping(
+def test_material_grouping_keeps_product_filter_attribution(
     executor: CarbonQLExecutor,
 ) -> None:
     program = query(
@@ -290,7 +291,8 @@ def test_product_filter_forces_product_perspective_before_material_grouping(
         {"op": "Aggregate", "metric": "sum_kgCO2e"},
     )
     result = executor.execute(program)
-    assert result.summary["projection_perspective"] == "product"
+    assert result.summary["projection_perspective"] == "material_source"
+    assert result.summary["record_projection_perspective"] == "product"
     assert result.summary["total_kgCO2e"] == pytest.approx(37.0)
     assert {row["material"]: row["kgCO2e"] for row in result.rows} == {
         None: pytest.approx(20.0),

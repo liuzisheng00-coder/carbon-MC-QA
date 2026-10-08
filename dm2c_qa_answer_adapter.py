@@ -8,7 +8,7 @@ from __future__ import annotations
 import re
 from typing import Any, Mapping, Sequence
 
-from dm2c_carbonql import CarbonQLProgram
+from dm2c_carbonql import CarbonQLProgram, derive_view_signature
 from dm2c_m3_context import CanonicalQueryResult, M3ExecutionContext
 
 PERSPECTIVE_FOR_SCORE = {
@@ -268,6 +268,18 @@ def _build_summary(
             "traced_atomic_emission_kgCO2e": total,
             "evidence_hops": len(result.evidence_ids),
         }
+
+    sources = derive_view_signature(program).emission_sources
+    if perspective in {"material", "process"} and set(sources) != {perspective}:
+        # Grouping describes the answer, not the carbon sources in its total.
+        # Keep the executor's neutral keys when the requested scope differs.
+        summary = {**base, "source_scope": "+".join(sources), "rows": rows}
+        if operation == "compare" and len(rows) >= 2:
+            summary["difference_kgCO2e"] = (
+                float(rows[0].get("kgCO2e") or 0.0)
+                - float(rows[1].get("kgCO2e") or 0.0)
+            )
+        return summary
 
     if perspective == "product" and operation in {"value", "aggregate"}:
         material_total, process_total = _product_source_split(

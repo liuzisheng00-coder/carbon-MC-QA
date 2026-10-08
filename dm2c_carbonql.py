@@ -720,14 +720,16 @@ def _sources_from_program(program: CarbonQLProgram) -> tuple[str, ...]:
     return tuple(value for value in ("material", "process") if value in sources)
 
 
-def _dimension_keys(program: CarbonQLProgram) -> frozenset[str]:
+def _dimension_keys(
+    program: CarbonQLProgram, *, include_filters: bool = True
+) -> frozenset[str]:
     keys: set[str] = set()
     for step in program.steps:
         if step.op == "GroupBy":
             raw = step.args.get("keys")
             values = (raw,) if isinstance(raw, str) else tuple(raw or ())
             keys.update(str(value) for value in values if value != "?")
-        elif step.op == "Filter":
+        elif include_filters and step.op == "Filter":
             field = str(step.args.get("field") or "")
             if field and field != "?":
                 keys.add(field)
@@ -746,25 +748,33 @@ def _selector_names_products(program: CarbonQLProgram) -> bool:
 
 
 def derive_projection_perspective(program: CarbonQLProgram) -> str:
-    """Read the perspective off G(P), per Equation M3.a.
+    """Derive the answer's view label, retaining the public function name.
 
-    An organizing dimension settles the perspective on its own, and the entity
-    scope does not contribute to that decision. When G(P) is empty the answer is
-    a single scalar and no organizing dimension is available, so the default
-    reading is the product perspective: the total carried by the selected
-    objects.
-
-    That default holds unless it would be unfaithful to the records it reads.
-    Reading material atoms through the product projection is lossless, since
-    every material record is carried by one component, so the label is only a
-    presentation choice. A process record need not be carried by any product.
-    An unorganized process-only program that names no product therefore takes
-    the process perspective: read as a product total it would silently drop
-    every shared record and report the remainder as though it were the whole
-    process account. Where the scope does name products the product projection
-    is what the question asked for, and the label follows it.
+    GroupBy fields determine how a grouped answer is organised. Filter fields
+    restrict its population without overriding that label. Ungrouped programs
+    retain the filter/source/selector fallback; their final operator determines
+    whether the answer is a scalar, trace, or another supported result type.
+    Record selection uses derive_record_projection_perspective independently.
     """
-    dimension_keys = _dimension_keys(program)
+    grouping_keys = _dimension_keys(program, include_filters=False)
+    return _perspective_from_dimensions(
+        program, grouping_keys or _dimension_keys(program)
+    )
+
+
+def derive_record_projection_perspective(program: CarbonQLProgram) -> str:
+    """Select the record policy before the executor's entity-scope overrides.
+
+    Both grouping and filter fields contribute to this policy. In particular,
+    a product filter must retain attributed contributions even when the answer
+    is grouped by material or process. Coverage checks use the same policy.
+    """
+    return _perspective_from_dimensions(program, _dimension_keys(program))
+
+
+def _perspective_from_dimensions(
+    program: CarbonQLProgram, dimension_keys: frozenset[str]
+) -> str:
     if not dimension_keys:
         if set(_sources_from_program(program)) == {"process"} and not (
             _selector_names_products(program)

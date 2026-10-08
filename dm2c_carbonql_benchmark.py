@@ -30,6 +30,7 @@ from dm2c_carbonql import (
     ENTITY_DIMENSIONS,
     GraphSchema,
     ProgramHole,
+    derive_projection_perspective,
     validate_program,
 )
 
@@ -735,7 +736,8 @@ def reference_evaluate(case: CarbonQLCase, context: CanonicalV2Context) -> Refer
         summary=MappingProxyType(
             {
                 "total_kgCO2e": math.fsum(row.value for row in selected),
-                "projection_perspective": perspective,
+                "projection_perspective": derive_projection_perspective(case.gold_program),
+                "record_projection_perspective": perspective,
                 "row_count": len(result_rows),
                 **_synthetic_energy_stamp(context, involves_process),
             }

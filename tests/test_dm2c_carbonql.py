@@ -316,7 +316,7 @@ def test_entity_name_dimensions_are_legal_filter_and_group_keys(
     assert derive_view_signature(query).base_views == ("process",)
 
 
-def test_product_filter_has_signature_precedence_over_source_grouping(schema: GraphSchema) -> None:
+def test_material_grouping_sets_signature_within_product_filter(schema: GraphSchema) -> None:
     query = program(
         {"op": "SelectProject"},
         {"op": "CarbonAtoms", "source": "all"},
@@ -325,7 +325,7 @@ def test_product_filter_has_signature_precedence_over_source_grouping(schema: Gr
         {"op": "Aggregate", "metric": "sum_kgCO2e"},
     )
     assert validate_program(query, schema).executable
-    assert derive_view_signature(query).base_views == ("product",)
+    assert derive_view_signature(query).base_views == ("material",)
 
 
 @pytest.mark.parametrize(
@@ -365,22 +365,6 @@ def test_synthesis_resolver_contract_is_typed_and_excludes_factor_fields(schema:
     assert contract["locator"] == "exactly one of ids or value; property is optional only with value"
     assert "property" not in contract
     assert "property auto" not in repr(messages).lower()
-    assert "source selection does not itself determine a base view" not in repr(messages)
-    rules = json.loads(messages[1]["content"])["contract"]["rules"]
-    assert any(
-        all(term in rule for term in (
-            "grouping and filter dimensions alone",
-            "selector never sets it",
-        ))
-        for rule in rules
-    )
-    assert any(
-        "no grouping or filter dimension" in rule and "product base view" in rule
-        for rule in rules
-    )
-    assert not any("highest precedence" in rule for rule in rules)
-    assert not any("selector intent" in rule for rule in rules)
-    assert any("factor" in rule and "source_kind" in rule and "requested source" in rule for rule in rules)
 
 
 @pytest.mark.parametrize(

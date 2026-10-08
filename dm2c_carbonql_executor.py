@@ -34,6 +34,7 @@ from dm2c_carbonql import (
     ProgramHole,
     _dimension_keys,
     derive_projection_perspective,
+    derive_record_projection_perspective,
     validate_program,
 )
 
@@ -929,6 +930,7 @@ class CarbonQLExecutor:
             )
 
         perspective = _perspective(program)
+        record_perspective = derive_record_projection_perspective(program)
         sources = _requested_sources(program)
         involves_process = "process" in sources
         # Entity scope, not perspective, decides whether records must carry product
@@ -939,7 +941,7 @@ class CarbonQLExecutor:
             projections = list(_product_projections(self.context))
         elif entity_filter is not None:
             projections = list(_source_projections(self.context))
-        elif perspective == "product":
+        elif record_perspective == "product":
             # Grouping along a product key legitimately reads process atoms
             # through the product projection: the question asks what each
             # object carries. Without any organizing dimension there is no such
@@ -952,9 +954,9 @@ class CarbonQLExecutor:
                 "without being reported"
             )
             projections = list(_product_projections(self.context))
-        elif perspective == "material_source":
+        elif record_perspective == "material_source":
             projections = list(_source_projections(self.context, kind="material"))
-        elif perspective == "energy_source":
+        elif record_perspective == "energy_source":
             projections = list(_source_projections(self.context, kind="energy"))
         else:
             projections = list(_source_projections(self.context))
@@ -1077,6 +1079,7 @@ class CarbonQLExecutor:
                 {
                     "total_kgCO2e": math.fsum(item.value for item in ordered),
                     "projection_perspective": perspective,
+                    "record_projection_perspective": record_perspective,
                     "row_count": len(rows),
                     **_synthetic_energy_stamp(self.context, involves_process),
                 }
