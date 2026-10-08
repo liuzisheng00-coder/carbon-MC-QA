@@ -2,6 +2,7 @@
 
 from pathlib import Path
 from dataclasses import replace
+import json
 
 import pytest
 
@@ -267,3 +268,26 @@ def test_product_grouping_summary_does_not_add_unfiltered_source_totals(release:
     assert len(observed["summary"]["rows"]) == 2
     assert 19.0 not in observed["supported_numeric_values"]
     assert 24.0 not in observed["supported_numeric_values"]
+
+
+def test_grouped_known_total_serializes_nested_rejection_disclosure(release: Path) -> None:
+    context = load_full_qa_context(release)
+    query = CarbonQLProgram.from_dict({"steps": [
+        {"op": "SelectProject"},
+        {"op": "CarbonAtoms", "source": "all", "known_total": True},
+        {"op": "GroupBy", "keys": ["source_kind"]},
+        {"op": "Aggregate", "metric": "sum_kgCO2e"},
+    ]})
+    result = execute_canonical_query(context, query)
+    assert result.summary["excluded_rejection_reasons"]["factor_not_found"] == 1
+
+    observed = adapt_observed(
+        question="Summarize known carbon by source.", program=query,
+        result=result, context=context,
+    )
+
+    decoded = json.loads(json.dumps(observed))
+    assert decoded["summary"]["excluded_rejection_reasons"] == {"factor_not_found": 1}
+    assert decoded["summary"]["total_kgCO2e"] == result.summary["total_kgCO2e"]
+    assert decoded["summary"]["rows"] == [dict(row) for row in result.rows]
+    assert "factor_not_found" in decoded["answer"]

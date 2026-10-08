@@ -192,6 +192,15 @@ def infer_operation(question: str, program: CarbonQLProgram) -> str:
     return "value"
 
 
+def _summary_payload(value: Any) -> Any:
+    """Convert immutable executor containers to JSON payload containers."""
+    if isinstance(value, Mapping):
+        return {key: _summary_payload(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_summary_payload(item) for item in value]
+    return value
+
+
 def adapt_observed(
     *,
     question: str,
@@ -210,7 +219,7 @@ def adapt_observed(
         else infer_perspective(question, result.perspective)
     )
     operation = infer_operation(question, program)
-    summary = _build_summary(
+    summary = _summary_payload(_build_summary(
         question=question,
         program=program,
         result=result,
@@ -218,7 +227,7 @@ def adapt_observed(
         operation=operation,
         context=context,
         selected_component_ids=selected_component_ids,
-    )
+    ))
     evidence_ids = list(result.evidence_ids)
     observed: dict[str, Any] = {
         "variant": "full_real",
