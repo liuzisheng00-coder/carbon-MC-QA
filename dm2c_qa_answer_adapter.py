@@ -276,8 +276,7 @@ def _build_summary(
         summary = {**base, "source_scope": "+".join(sources), "rows": rows}
         if operation == "compare" and len(rows) >= 2:
             summary["difference_kgCO2e"] = (
-                float(rows[0].get("kgCO2e") or 0.0)
-                - float(rows[1].get("kgCO2e") or 0.0)
+                rows[0]["kgCO2e"] - rows[1]["kgCO2e"]
             )
         return summary
 

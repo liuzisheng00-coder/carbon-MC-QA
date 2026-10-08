@@ -185,3 +185,28 @@ def test_mixed_source_summary_preserves_ranked_and_compared_values(
     else:
         assert observed["summary"]["rows"][1]["kgCO2e"] == pytest.approx(16.0)
         assert observed["summary"]["difference_kgCO2e"] == pytest.approx(4.0)
+
+
+@pytest.mark.parametrize("invalid_value", ["missing", None])
+def test_mixed_comparison_does_not_substitute_zero_for_a_missing_measure(
+    release: Path, invalid_value: str | None,
+) -> None:
+    context = load_full_qa_context(release)
+    payload = grouped_query("all", "component_type", "type:structural", ["material"]).to_dict()
+    payload["steps"].append({"op": "Compare"})
+    query = CarbonQLProgram.from_dict(payload)
+    result = execute_canonical_query(context, query)
+    rows = [dict(row) for row in result.rows]
+    if invalid_value == "missing":
+        del rows[0]["kgCO2e"]
+    else:
+        rows[0]["kgCO2e"] = invalid_value
+    broken_result = replace(result, rows=tuple(rows))
+
+    # A successful executor result must carry a numeric measure in each row.
+    # An internal contract violation must not become a plausible carbon value.
+    with pytest.raises((KeyError, TypeError)):
+        adapt_observed(
+            question="查看所选范围的分类碳排放", program=query,
+            result=broken_result, context=context,
+        )
