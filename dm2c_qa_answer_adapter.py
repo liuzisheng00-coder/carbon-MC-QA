@@ -15,7 +15,7 @@ PERSPECTIVE_FOR_SCORE = {
     "product": "product",
     "material_source": "material",
     "energy_source": "process",
-    "source_union": "product",
+    "source_union": "material+process",
 }
 
 _EXPLAIN_CUE = re.compile(
@@ -138,7 +138,7 @@ def _evidence_chain_question(question: str) -> bool:
 
 
 def infer_perspective(question: str, raw_perspective: str) -> str:
-    """Map execution views to product / material / process answer classes."""
+    """Apply the existing question-wording policy to ungrouped answer labels."""
 
     text = question or ""
     mapped = map_perspective(raw_perspective)
@@ -202,7 +202,13 @@ def adapt_observed(
     elapsed_ms: float = 0.0,
     compiler_status: str | None = None,
 ) -> dict[str, Any]:
-    perspective = infer_perspective(question, result.perspective)
+    # The compiled grouping already defines the view; answer wording must not
+    # reinterpret it. Ungrouped answers retain their existing wording policy.
+    perspective = (
+        map_perspective(result.perspective)
+        if any(step.op == "GroupBy" for step in program.steps)
+        else infer_perspective(question, result.perspective)
+    )
     operation = infer_operation(question, program)
     summary = _build_summary(
         question=question,
@@ -270,9 +276,14 @@ def _build_summary(
         }
 
     sources = derive_view_signature(program).emission_sources
-    if perspective in {"material", "process"} and set(sources) != {perspective}:
-        # Grouping describes the answer, not the carbon sources in its total.
-        # Keep the executor's neutral keys when the requested scope differs.
+    grouped_total = operation in {"value", "aggregate"} and any(
+        step.op == "GroupBy" for step in program.steps
+    )
+    if grouped_total or perspective == "material+process" or (
+        perspective in {"material", "process"} and set(sources) != {perspective}
+    ):
+        # A grouped total belongs to the current result, not a new project-wide
+        # query. Its grouping label also need not match its carbon sources.
         summary = {**base, "source_scope": "+".join(sources), "rows": rows}
         if operation == "compare" and len(rows) >= 2:
             summary["difference_kgCO2e"] = (

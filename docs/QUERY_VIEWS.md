@@ -26,6 +26,13 @@ source matches the material or process label. For other source scopes, it keeps
 the executor's neutral `total_kgCO2e` and declares `source_scope`. A mixed total
 grouped by material is therefore not reported as material-only carbon.
 
+Grouped total summaries use the current result's totals and rows, with the
+requested source scope, and never requery project-wide source totals.
+For grouped answers, the adapter takes the view label from the execution result
+without interpreting the question again. It displays `source_union` as
+`material+process`, matching the service, and uses the current result's totals
+and rows. A combined view does not invoke product-level source-total queries.
+
 ## Label rule
 
 The following precedence applies to `GroupBy` fields when present. With no

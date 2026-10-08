@@ -210,3 +210,60 @@ def test_mixed_comparison_does_not_substitute_zero_for_a_missing_measure(
             question="查看所选范围的分类碳排放", program=query,
             result=broken_result, context=context,
         )
+
+
+@pytest.mark.parametrize("question", [
+    "Show carbon totals by factor source for steel.",
+    "Show material and process carbon by factor source for steel.",
+    "Show material carbon by factor source for steel.",
+])
+def test_combined_view_summary_uses_only_the_filtered_execution(
+    release: Path, question: str,
+) -> None:
+    context = load_full_qa_context(release)
+    query = grouped_query("all", "material", "material:steel", ["factor_source"])
+    result = execute_canonical_query(context, query)
+    observed = adapt_observed(question=question, program=query, result=result, context=context)
+
+    assert observed["status"] == "executable"
+    assert observed["perspective"] == "material+process"
+    assert observed["summary"]["total_kgCO2e"] == pytest.approx(16.0)
+    assert observed["summary"]["source_scope"] == "material+process"
+    assert observed["summary"]["rows"] == [dict(row) for row in result.rows]
+    assert "totalMaterialCarbon_kgCO2e" not in observed["summary"]
+    assert "knownProcessCarbon_kgCO2e" not in observed["summary"]
+    assert 19.0 not in observed["supported_numeric_values"]
+    assert 24.0 not in observed["supported_numeric_values"]
+
+
+@pytest.mark.parametrize(("source", "group", "question", "view"), [
+    ("material", "material", "Show carbon by material for the project's known carbon total.", "material"),
+    ("process", "carrier", "Show carbon by carrier for the project's known carbon total.", "process"),
+])
+def test_grouped_answer_label_is_not_reinterpreted_from_question_words(
+    release: Path, source: str, group: str, question: str, view: str,
+) -> None:
+    context = load_full_qa_context(release)
+    query = grouped_query(source, "component_type", "type:structural", [group])
+    result = execute_canonical_query(context, query)
+    observed = adapt_observed(question=question, program=query, result=result, context=context)
+
+    assert observed["status"] == "executable"
+    assert observed["perspective"] == view
+
+
+def test_product_grouping_summary_does_not_add_unfiltered_source_totals(release: Path) -> None:
+    context = load_full_qa_context(release)
+    query = grouped_query("material", "material", "material:steel", ["component"])
+    result = execute_canonical_query(context, query)
+    observed = adapt_observed(
+        question="Show material carbon for each component.", program=query,
+        result=result, context=context,
+    )
+
+    assert observed["perspective"] == "product"
+    assert observed["summary"]["total_kgCO2e"] == pytest.approx(16.0)
+    assert observed["summary"]["source_scope"] == "material"
+    assert len(observed["summary"]["rows"]) == 2
+    assert 19.0 not in observed["supported_numeric_values"]
+    assert 24.0 not in observed["supported_numeric_values"]
